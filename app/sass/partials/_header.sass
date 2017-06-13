@@ -1,0 +1,48 @@
+/* start header */
+.header
+  padding: 20px 0
+  +rmin($screen-xs)
+    text-align: center
+  .logo
+    margin-left: 50px
+  +rmin($screen-sm)
+    padding-top: 30px
+    padding-bottom: 30px
+  .header-aside
+    position: absolute
+    right: 15px
+    top: 31px
+  .search-form, .header-icon-link
+    display: inline-block
+    vertical-align: middle
+    padding: 0 3px
+  .input
+    position: absolute
+    right: -10px
+    top: -50%
+    opacity: 1
+    width: 260px
+    font-size: 16px
+    background: #eef6fb
+    opacity: 0
+    visibility: hidden
+    transform: translateX(-20px)
+    // TODO: make input appear on click
+  .search-form
+    position: relative
+    button
+      padding: 0
+      background-color: transparent
+      border: 0
+      position: relative
+      top: 1px
+/* end header */
+
+.input
+  height: 47px
+  border: 1px solid #b1c6d4
+  border-radius: 30px
+  padding-left: 35px
+  padding-right: 35px
+  &-padded-right, &.search-input
+    padding-right: 70px

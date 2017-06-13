@@ -1,4 +1,39 @@
 //BEGIN header
-header.site-header
-  p header
+header.header
+  // start header-middle
+  .header-middle
+    .container
+      a.nav-trigger(href="#" role="button")
+        span.hamb
+      a.logo(title="ССТ")
+        img(src="images/logo.png" alt="ССТ")
+      aside.header-aside
+        a.popup-link.header-icon-link(href="popup-contact")
+          include ../data/envelope.svg
+        a.popup-link.header-icon-link(href="popup-contact")
+          include ../data/phone.svg
+        form.search-form
+          input.input.search-input(type="text" placeholder="Что будем искать?")
+          button.button-search
+            include ../data/magnifier.svg
+  // end header-middle
+  // start header-bottom
+  .header-bottom
+    .container
+      a.main-nav-trigger.hidden-xs.hidden-sm(href="#" role="button")
+        span Открыть меню
+      // start main-nav
+      nav.main-nav
+        ul.list-reset
+          li: a(href="#"): span Главная 
+          li: a(href="#"): span О компании
+          li: a(href="#"): span Решения и услуги 
+          li: a(href="#"): span Отрасли 
+          li: a(href="#"): span Проекты 
+          li: a(href="#"): span Каталог 
+          li: a(href="#"): span Партнеры 
+          li: a(href="#"): span Пресс-центр 
+          li: a(href="#"): span Контакты
+      // end main-nav
+  // end header-bottom
 //END header

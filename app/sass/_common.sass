@@ -1,21 +1,19 @@
-
 html
   box-sizing: border-box
   +rmin($screen-sm)
     min-height: 100%
     position: relative
-  &.asd
-    margin-right: 0
 
 *, *:before, *:after
   box-sizing: inherit
 
 body
-  background: #FFF
+  background: #eef6fb
   line-height: 1.4
   color: black
-  font-size: 14px
+  font-size: 17px
   font-weight: 400
+  font-family: 'Calibri', 'Calibri Custom', sans-serif
 
 a
   color: inherit
@@ -31,3 +29,55 @@ img
 .slick-slide img
   &:focus
     outline: none
+
+/* start mobile-menu */
+.mobile-menu
+  position: fixed
+  height: 100%
+  background-color: #fff
+  width: 240px
+  padding: 10px
+  box-shadow: 0 10px 10px 0 rgba(black, 0.1)
+  transform: translateX(-260px)
+  +tr()
+  &.js-active
+    transform: none
+/* end mobile-menu */
+
+/* start nav-trigger */
+.nav-trigger
+  position: absolute
+  left: 15px
+  top: 36px
+  z-index: 302
+  .hamb
+    +burger(20px, 2px, 4px, #231f28)
+  &.js-active
+    transform: scale(1.4)
+    .hamb
+      +burger-to-cross()
+/* end nav-trigger */
+
+.out
+  overflow: hidden
+  position: relative
+  will-change: transform
+  +tr()
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(#001e42, 0.3)
+    visibility: hidden
+    opacity: 0
+    transition: visibility 0.3s, opacity 0.3s 0.1s
+    z-index: 10
+  &.js-overlayed
+    transform: translateX(240px)
+    &:before
+      transition: visibility 0.05s, opacity 0.3s 0.01s
+      visibility: visible
+      opacity: 1
