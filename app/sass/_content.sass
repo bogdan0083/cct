@@ -318,6 +318,7 @@
     line-height: 1.3
     text-transform: uppercase
     letter-spacing: 1px
+    font-size: 25px
     +rmin($screen-sm)
       font-size: 36px
       width: 400px
@@ -608,3 +609,357 @@
     width: 233px
     height: 204px
 /* end partner-item */
+
+.certificates
+  padding-top: 10px
+  padding-bottom: 40px
+  &-bottom
+    margin-top: 10px
+  +rmin($screen-sm)
+    padding-bottom: 80px
+
+.certificates-group
+  text-align: center
+  max-width: 1120px
+  margin: 0 auto
+
+/* start certificate-item */
+.certificate-item
+  display: inline-block
+  text-align: center
+  text-decoration: none
+  margin-bottom: 60px
+  margin-left: 10px
+  margin-right: 10px
+  +tr()
+  &:focus
+    outline: none
+  +rmin($screen-sm)
+    margin-left: 30px
+    margin-right: 30px
+  .img
+    +tr()
+  &:hover
+    transform: scale(1.1)
+    .img
+      opacity: .6
+    .desc
+      opacity: 1
+  .desc
+    margin-top: 8px
+    color: #0a1623
+    opacity: .7
+    +tr()
+/* end certificate-item */
+
+.news
+  padding-top: 10px
+  padding-bottom: 40px
+  +rmin($screen-sm)
+    padding-bottom: 80px
+  &-bottom
+    margin-top: 40px
+/* start news-item */
+.news-item
+  max-width: 526px
+  margin: 12px auto
+  background-color: white
+  text-align: center
+  position: relative
+  &:hover
+    .news-image:before
+      opacity: 0
+    img
+      transform: scale(1.2) translateZ(0)
+    .circle
+      background-color: $color-red
+      transform: scale(1.2) rotate(360deg)
+      svg path
+        fill: white
+  .news-image
+    display: block
+    overflow: hidden
+    position: relative
+    &:before
+      content: ''
+      background-color: #153a62
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      position: absolute
+      opacity: .2
+      transition: opacity 0.3s 0.01s
+      z-index: 1
+      +gpu()
+    img
+      width: 100%
+      display: block
+      +tr()
+  .content
+    padding: 30px 0
+    border: 1px solid #b0c6d3
+    padding-left: 20px
+    padding-right: 20px
+    +rmin($screen-sm)
+      padding-top: 54px
+      min-height: 270px
+      padding-bottom: 10px
+      padding-left: 10px
+      padding-right: 10px
+    +rmin($screen-md)
+      padding-left: 70px
+      padding-right: 70px
+  &-link
+    +futura()
+    font-size: 15px
+    color: #21446b
+    text-transform: uppercase
+    letter-spacing: 1px
+    margin-bottom: 0
+    display: block
+    line-height: 1.6
+    overflow: hidden
+    margin-top: 20px
+    text-decoration: none
+    +rmin($screen-sm)
+      font-size: 18px
+      height: 60px
+    &:before
+      content: ''
+      top: 0
+      left: 0
+      position: absolute
+      width: 100%
+      height: 100%
+      z-index: 5
+  &-date
+    font-size: 15px
+    color: #6d6d6d
+    font-weight: 300
+    padding-bottom: 14px
+    display: block
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 50%
+      margin-left: -83px
+      background-color: #b62c45
+      width: 166px
+      height: 1px
+  .circle
+    width: 28px
+    height: 28px
+    border-radius: 50%
+    border: 1px solid #b92845
+    background-color: transparent
+    display: inline-block
+    vertical-align: middle
+    margin: 10px auto 0
+    position: relative
+    +tr()
+    svg
+      position: absolute
+      margin: auto
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      +tr()
+      path
+        fill: $color-red
+        +tr()
+/* end news-item */
+
+/* start top-block */
+.top-block-post
+  .top-block-heading
+    width: 100%
+    +rmin($screen-sm)
+      font-size: 30px
+      line-height: 1.6
+
+/* end top-block */
+
+.news-article
+  padding-bottom: 30px
+  +rmin($screen-sm)
+    padding-bottom: 70px
+.news-article-bottom
+  margin-top: 40px
+
+.custom-content
+  color: #0a1623
+  padding-bottom: 20px
+  line-height: 1.7
+  max-width: 1185px
+  margin: 0 auto
+  +rmin($screen-sm)
+    padding-top: 40px
+    padding-bottom: 10px
+    .container
+      max-width: 1240px
+
+.custom-list
+  padding: 0
+  margin: 0
+  list-style-type: none
+  p, ul
+    margin: 30px 0
+  li
+    margin: 4px 0
+    position: relative
+    padding-left: 20px
+    &:before
+      content: '•'
+      font-size: 18px
+      position: absolute
+      left: 0
+      top: -1px
+      color: #b4294b
+
+.projects
+  padding-top: 10px
+  padding-bottom: 40px
+  +rmin($screen-sm)
+    padding-bottom: 100px
+/* start projects-filter */
+.projects-filter
+  border-bottom: 1px solid #cfdde7
+  color: #6d6d6d
+  text-align: center
+  .inner
+    max-width: 700px
+    margin: 0 auto
+  a
+    display: inline-block
+    padding-bottom: 20px
+    width: 32%
+    font-size: 16px
+    vertical-align: middle
+    position: relative
+    text-decoration: none
+    &:after
+      content: ''
+      position: absolute
+      width: 9px
+      height: 9px
+      background-color: #f1f7fc
+      border: 1px solid #434343
+      border-radius: 50%
+      left: 50%
+      margin-left: -4px
+      bottom: -4px
+      +tr()
+    &:not(.active):hover
+      color: black
+      &:after
+        transform: scale(1.4)
+        border-color: $color-red
+    &.active
+      color: black
+      &:after
+        border-color: $color-red
+        background-color: $color-red
+/* end projects-filter */
+
+.projects-bottom
+  margin-top: 50px
+
+.projects-group
+  text-align: center
+  padding-top: 40px
+  max-width: 1640px
+  margin: 0 auto
+  padding-left: 10px
+  padding-right: 10px
+
+.projects-col
+  width: 100%
+  padding-left: 12px
+  padding-right: 12px
+  +rmin($screen-sm)
+    float: left
+    width: 50%
+  +rmin($screen-lg)
+    width: 33.3333%
+/* start projects-item */
+.projects-item
+  text-decoration: none
+  display: block
+  border-bottom: 1px solid #dce2e8
+  position: relative
+  background-color: #fff
+  border: 1px solid #b1c6d4
+  max-width: 100%
+  width: 100%
+  padding: 20px 20px 40px
+  overflow: hidden
+  text-align: center
+  margin: 12px auto
+  text-decoration: none
+  &:hover
+    .circle
+      transform: rotate(-360deg) scale(1.1)
+      background-color: #bc324e
+      svg path
+        fill: white
+  .logo
+    height: 100px
+    position: relative
+    margin-bottom: 30px
+    &:after
+      content: ''
+      bottom: 0
+      left: 50%
+      background-color: #bc324e
+      position: absolute
+      width: 166px
+      height: 1px
+      margin-left: -83px
+    img
+      display: inline-block
+      margin: auto
+      top: 0
+      bottom: 0
+      right: 0
+      left: 0
+      position: absolute
+  &-heading
+    font-size: 17px
+    color: #0a1623
+    text-transform: uppercase
+    margin-bottom: 0
+    letter-spacing: 1px
+    +futura()
+  &-desc
+    margin: 0
+    opacity: .7
+    color: #131313
+    font-size: 14px
+    +rmin($screen-sm)
+      font-size: 15px
+  .circle
+    width: 28px
+    height: 28px
+    border-radius: 50%
+    border: 1px solid #b92845
+    background-color: transparent
+    display: block
+    margin: 20px auto 0
+    position: relative
+    +tr()
+    svg path
+      fill: #b92845
+    svg
+      position: absolute
+      margin: auto
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      path
+        +tr()
+/* end projects-item */

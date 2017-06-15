@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   // variables ----------------------
   var $navTrigger = $('.nav-trigger');
   var $mobileMenu = $('.mobile-menu');
@@ -8,6 +7,9 @@ $(document).ready(function () {
   var $mainNavTrigger = $('.main-nav-trigger');
   var $projectsSlider = $('.projects-slider');
   var $itemsAmountSelect = $('.items-amount-select');
+
+  // window width
+  var windowWdth = $(window).width();
   // end variables
   // Mobile menu click events
   $('.nav-trigger').click(function (e) {
@@ -61,4 +63,37 @@ $(document).ready(function () {
   });
 
   $itemsAmountSelect.selectize();
+
+  $('.zoom-popup').magnificPopup({
+    type: 'image',
+    easing: 'ease-in-out',
+    mainClass: 'mfp-with-zoom',
+    zoom: {
+      enabled: true,
+      duration: 300,
+      easing: 'ease-in-out'
+    }
+  });
+
+  // если мы на десктопе
+  if (windowWdth > 900) {
+    // обрезаем длинные блоки с классом .js-truncated
+    console.log(windowWdth);
+    $('.js-truncated').dotdotdot({
+      watch: 'window',
+      height: 60
+    });
+  }
+
+  var $grid = $('.grid').isotope({
+    itemSelector: '.projects-col'
+  });
+  // bind filter button click
+  $('.projects-filter').on( 'click', 'a', function (e) {
+    e.preventDefault();
+    $('.projects-filter a').removeClass('active');
+    $(this).toggleClass('active');
+    var filterValue = $( this ).attr('data-filter');
+    $grid.isotope({ filter: filterValue });
+  });
 });

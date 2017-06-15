@@ -1,0 +1,171 @@
+//- title: Index Page
+extends layouts/_layout
+block head
+  - var title = 'News'
+  - var active = 7
+block content
+  // start news
+  section.news
+    .container
+      h1.page-heading Новости
+      .news-group
+        .row
+          .col-xs-12.col-sm-12.col-md-6.col-lg-4
+            // start news-item
+            .news-item 
+              .news-image
+                img(src="images/news1.jpg")
+              .content
+                .news-item-date 09.03.2017
+                a.news-item-link.js-truncated(href="#") В 2017 году компания ССТ продолжит сотрудничество с СО ЕЭС
+                .circle
+                  include data/arr-right.svg  
+            // end news-item
+          .col-xs-12.col-sm-12.col-md-6.col-lg-4
+            // start news-item
+            .news-item 
+              .news-image
+                img(src="images/news2.jpg")
+              .content
+                .news-item-date 09.03.2017
+                a.news-item-link.js-truncated(href="#") сообщаем о продлении промо-программы trade in/up...
+                .circle
+                  include data/arr-right.svg  
+            // end news-item
+          .col-xs-12.col-sm-12.col-md-6.col-lg-4
+            // start news-item
+            .news-item 
+              .news-image
+                img(src="images/news3.jpg")
+              .content
+                .news-item-date 09.03.2017
+                a.news-item-link.js-truncated(href="#") Очень много текста, три строки. Но будет только две. Остальные будут обрезанны
+                .circle
+                  include data/arr-right.svg  
+            // end news-item
+          .col-xs-12.col-sm-12.col-md-6.col-lg-4
+            // start news-item
+            .news-item 
+              .news-image
+                img(src="images/news1.jpg")
+              .content
+                .news-item-date 09.03.2017
+                a.news-item-link.js-truncated(href="#") В 2017 году компания ССТ продолжит сотрудничество с СО ЕЭС
+                .circle
+                  include data/arr-right.svg  
+            // end news-item
+          .col-xs-12.col-sm-12.col-md-6.col-lg-4
+            // start news-item
+            .news-item 
+              .news-image
+                img(src="images/news2.jpg")
+              .content
+                .news-item-date 09.03.2017
+                a.news-item-link.js-truncated(href="#") сообщаем о продлении промо-программы trade in/up...
+                .circle
+                  include data/arr-right.svg  
+            // end news-item
+          .col-xs-12.col-sm-12.col-md-6.col-lg-4
+            // start news-item
+            .news-item 
+              .news-image
+                img(src="images/news3.jpg")
+              .content
+                .news-item-date 09.03.2017
+                a.news-item-link.js-truncated(href="#") Очень много текста, три строки. Но будет только две. Остальные будут обрезанны
+                .circle
+                  include data/arr-right.svg  
+            // end news-item
+          .col-xs-12.col-sm-12.col-md-6.col-lg-4
+            // start news-item
+            .news-item 
+              .news-image
+                img(src="images/news1.jpg")
+              .content
+                .news-item-date 09.03.2017
+                a.news-item-link.js-truncated(href="#") В 2017 году компания ССТ продолжит сотрудничество с СО ЕЭС
+                .circle
+                  include data/arr-right.svg  
+            // end news-item
+          .col-xs-12.col-sm-12.col-md-6.col-lg-4
+            // start news-item
+            .news-item 
+              .news-image
+                img(src="images/news2.jpg")
+              .content
+                .news-item-date 09.03.2017
+                a.news-item-link.js-truncated(href="#") сообщаем о продлении промо-программы trade in/up...
+                .circle
+                  include data/arr-right.svg  
+            // end news-item
+          .col-xs-12.col-sm-12.col-md-6.col-lg-4
+            // start news-item
+            .news-item 
+              .news-image
+                img(src="images/news3.jpg")
+              .content
+                .news-item-date 09.03.2017
+                a.news-item-link.js-truncated(href="#") Очень много текста, три строки. Но будет только две. Остальные будут обрезанны
+                .circle
+                  include data/arr-right.svg  
+            // end news-item
+      // start news-bottom
+      .news-bottom 
+        a.btn.btn-mini.js-show-more(href="#")
+          span
+            include data/arr-down.svg
+      // end news-bottom
+  // end news
+  // start projects-history
+  section.projects-history
+    h3 История успеха
+    ul.projects-slider.list-reset
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo1.jpg" alt="Смартс")
+          h4 Cтроительство Зонового узла
+          p Строительство Сети Metro Ethernet
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo2.jpg" alt="Газпром")
+          h4 организация узла связи
+          p г. Москва, Варшавское ш., д.118, БЦ « Варшавка Скай»
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo3.jpg" alt="Ростелеком")
+          h4 телефонизация новостроек
+          p Строительство сети FTTB light по адресу МО
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo1.jpg" alt="Смартс")
+          h4 Cтроительство Зонового узла
+          p Строительство Сети Metro Ethernet
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo2.jpg" alt="Газпром")
+          h4 организация узла связи
+          p г. Москва, Варшавское ш., д.118, БЦ « Варшавка Скай»
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo3.jpg" alt="Ростелеком")
+          h4 телефонизация новостроек
+          p Строительство сети FTTB light по адресу МО
+          .circle
+            include data/arr-right.svg
+  // end projects-history

@@ -1,0 +1,97 @@
+//- title: Index Page
+extends layouts/_layout
+block head
+  - var title = 'Partners'
+  - var active = 1
+  - var submenuActive = true
+  - var submenuIdx = 4
+block content
+  // start certificates
+  section.certificates 
+    .container
+      h1.page-heading Лицензии и сертификаты
+      .certificates-group
+        a.certificate-item.zoom-popup(href="images/cert1.jpg")
+          .img
+            img(src="images/cert1.jpg" alt="")
+          .desc ГОСТ Р ИСО 14001
+        a.certificate-item.zoom-popup(href="images/cert2.jpg")
+          .img
+            img(src="images/cert2.jpg" alt="")
+          .desc ГОСТ Р ИСО 14001
+        a.certificate-item.zoom-popup(href="images/cert3.jpg")
+          .img
+            img(src="images/cert3.jpg" alt="")
+          .desc ГОСТ Р ИСО 14001
+        a.certificate-item.zoom-popup(href="images/cert4.jpg")
+          .img
+            img(src="images/cert4.jpg" alt="")
+          .desc ГОСТ Р ИСО 14001
+        a.certificate-item.zoom-popup(href="images/cert5.jpg")
+          .img
+            img(src="images/cert5.jpg" alt="")
+          .desc ГОСТ Р ИСО 14001
+        a.certificate-item.zoom-popup(href="images/cert6.jpg")
+          .img
+            img(src="images/cert6.jpg" alt="")
+          .desc ГОСТ Р ИСО 14001
+      // start certificates-bottom
+      .certificates-bottom 
+        a.btn.btn-mini.js-show-more
+          span
+            include data/arr-down.svg
+      // end certificates-bottom
+  // end certificates
+  // start projects-history
+  section.projects-history
+    h3 История успеха
+    ul.projects-slider.list-reset
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo1.jpg" alt="Смартс")
+          h4 Cтроительство Зонового узла
+          p Строительство Сети Metro Ethernet
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo2.jpg" alt="Газпром")
+          h4 организация узла связи
+          p г. Москва, Варшавское ш., д.118, БЦ « Варшавка Скай»
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo3.jpg" alt="Ростелеком")
+          h4 телефонизация новостроек
+          p Строительство сети FTTB light по адресу МО
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo1.jpg" alt="Смартс")
+          h4 Cтроительство Зонового узла
+          p Строительство Сети Metro Ethernet
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo2.jpg" alt="Газпром")
+          h4 организация узла связи
+          p г. Москва, Варшавское ш., д.118, БЦ « Варшавка Скай»
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo3.jpg" alt="Ростелеком")
+          h4 телефонизация новостроек
+          p Строительство сети FTTB light по адресу МО
+          .circle
+            include data/arr-right.svg
+  // end projects-history

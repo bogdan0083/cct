@@ -7,7 +7,7 @@ block content
   // start catalog-items
   .catalog-items
     // start top-block
-    section.top-block.top-block-items
+    .top-block.top-block-items
       // start top-block-image
       .top-block-right
         .background(style="background-image: url(images/catalog-img-full.jpg)")
@@ -20,7 +20,9 @@ block content
               include data/arr-left.svg
             span Вернуться
           h1.top-block-heading OpenScape Branch 50/250 V2
-          p.top-block-desc Современное универсальное решение унифицированных коммуникаций и совместной работы, специально разработанное для компаний малого и среднего бизнеса, имеющих один или несколько офисов, на базе сервера или виртуальной машины.     section.catalog-items-group
+          p.top-block-desc Современное универсальное решение унифицированных коммуникаций и совместной работы, специально разработанное для компаний малого и среднего бизнеса, имеющих один или несколько офисов, на базе сервера или виртуальной машины.         // end top-block-left
+    // end top-block
+    section.catalog-items-group
       .container
         h2.heading.heading-lined 
           span OpenScape 4000
@@ -132,14 +134,14 @@ block content
               li
                 a.pagination-item.pagination-item-icon(href="#")
                   include data/arr-double-high.svg
-          .catalog-show-amount
-            span Показывать по:
-            .items-amount-wrap
-              select.items-amount-select
-                option 12
-                option 25
-                option 50
-            
+              .catalog-show-amount
+                span Показывать по:
+                .items-amount-wrap
+                  select.items-amount-select
+                    option 12
+                    option 25
+                    option 50
+              
   // end catalog-items
   // start projects-history
   section.projects-history

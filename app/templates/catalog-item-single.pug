@@ -1,0 +1,102 @@
+//- title: Index Page
+extends layouts/_layout
+block head
+  - var title = 'Catalog level 3'
+  - var active = 5
+block content
+  // start catalog-items
+  section.catalog-items
+    // start top-block
+    .top-block.top-block-items
+      // start top-block-image
+      .top-block-right.top-block-img
+        img(src='images/item1.jpg')
+      // end top-block-image
+      // start top-block-left
+      .top-block-left
+        .inner
+          a.top-block-back(href='#')
+            .circle
+              svg(xmlns='http://www.w3.org/2000/svg', width='12', height='10', viewbox='0 0 12 10')
+                path(fill='#b62c45', d='M5.01.5L4.3 0l-3 4H1v.32a.4.4 0 0 0 0 .18v.02a.4.4 0 0 0 0 .18V5h.3l3 4.01.71-.5L2.38 5H12V4H2.4z')
+            span Вернуться
+          .top-block-article Заводской номер: S30810-Q2196-X
+          h1.top-block-heading HiPath 4000 DIUN2 ISD модуль 2 потока E1 (S2, PRI)
+          p.top-block-desc
+            | При установке IP-УАТС компания получает ряд значительных преимуществ. IP-телефония обеспечивает снижение затрат на междугородные и международные
+  // end catalog-items
+  // start custom-content
+  section.custom-content
+    .container
+      h2.heading.heading-lined Описание
+      .content
+      p
+        | Модуль HiPath 4000 DIUN2 предназначен для подключения АТС HiPath4000 к телефонным сетям общего и частного пользования по 2-м потокам Е1 (S2, PRI) c 60 цифровыми каналами и поддержкой R1.5 и R2.Также DIUN2 поддерживает опцию Nx64Kbit. Суммарная
+        | скорость передачи, включая сигнализацию и синхронизацию, составляет 2048 Мбит/с. Модуль DIUN2 поддерживает способы соединения по медным проводам (75 и 120 Ом) и оптоволоконный:
+      p
+        span(style='color: #b62c45;') •
+        |  для подключения оптоволокна к передней панели модуля используется один из трех типов адаптера AMOM. DIUN2 обеспечивает два типа оптоволоконного соединения (одномодовый и многомодовый). Доступ производится
+        |                     либо к обоим портам через старый интерфейс задней панели, либо через оптоволоконный интерфейс с передней панели (разъем 15 Sub-D);
+      p
+        span(style='color: #b62c45;') •
+        |  для подключения медных проводов используются две пары линий, составляющих физический интерфейс каждого порта платы:одна пара для приёма,другая пара для передачи сигнала. Подключение происходит посредством
+        |                     двух 15-штырьковых разъемов Sub-D, расположенных с передней стороны модуля.Выбор подходящего оконечного сопротивления производится программным путем. При использовании коаксиальных линий передачи необходимо выбрать линейное сопротивление
+        |                     в 75 Ом, для защищенных линий с витой парой используется сопротивление 120 Ом.
+  // end custom-content
+  // start projects-history
+  section.projects-history
+    h3 История успеха
+    ul.projects-slider.list-reset
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo1.jpg" alt="Смартс")
+          h4 Cтроительство Зонового узла
+          p Строительство Сети Metro Ethernet
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo2.jpg" alt="Газпром")
+          h4 организация узла связи
+          p г. Москва, Варшавское ш., д.118, БЦ « Варшавка Скай»
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo3.jpg" alt="Ростелеком")
+          h4 телефонизация новостроек
+          p Строительство сети FTTB light по адресу МО
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo1.jpg" alt="Смартс")
+          h4 Cтроительство Зонового узла
+          p Строительство Сети Metro Ethernet
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo2.jpg" alt="Газпром")
+          h4 организация узла связи
+          p г. Москва, Варшавское ш., д.118, БЦ « Варшавка Скай»
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo3.jpg" alt="Ростелеком")
+          h4 телефонизация новостроек
+          p Строительство сети FTTB light по адресу МО
+          .circle
+            include data/arr-right.svg
+  // end projects-history
+  .breadcrumbs-bottom
+    ul.list-reset.breadcrumbs-list
+      li: a(href="#") Главная
+      li: a.current(href="#") Каталог

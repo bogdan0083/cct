@@ -88,7 +88,7 @@
         <!-- start catalog-items-->
         <div class="catalog-items">
             <!-- start top-block-->
-            <section class="top-block top-block-items">
+            <div class="top-block top-block-items">
                 <!-- start top-block-image-->
                 <div class="top-block-right">
                     <div class="background" style="background-image: url(images/catalog-img-full.jpg);"></div>
@@ -107,8 +107,10 @@
                         <h1 class="top-block-heading">OpenScape Branch 50/250 V2</h1>
                         <p class="top-block-desc">Современное универсальное решение унифицированных коммуникаций и совместной работы, специально разработанное для компаний малого и среднего бизнеса, имеющих один или несколько офисов, на базе сервера или виртуальной машины.</p>
                     </div>
+                    <!-- end top-block-left-->
                 </div>
-            </section>
+            </div>
+            <!-- end top-block-->
             <section class="catalog-items-group">
                 <div class="container">
                     <h2 class="heading heading-lined"> <span>OpenScape 4000</span></h2>
@@ -338,16 +340,16 @@
                                         </svg>
                                     </a>
                                 </li>
+                                <div class="catalog-show-amount"><span>Показывать по:</span>
+                                    <div class="items-amount-wrap">
+                                        <select class="items-amount-select">
+                                            <option>12</option>
+                                            <option>25</option>
+                                            <option>50</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </ul>
-                        </div>
-                        <div class="catalog-show-amount"><span>Показывать по:</span>
-                            <div class="items-amount-wrap">
-                                <select class="items-amount-select">
-                                    <option>12</option>
-                                    <option>25</option>
-                                    <option>50</option>
-                                </select>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -539,9 +541,11 @@
     <!-- endbuild-->
     <!-- build:js scripts/libs/libs.js-->
     <script type="text/javascript" src="scripts/libs/slick.min.js"></script>
-    <script type="text/javascript" src="scripts/libs/aos.js"></script>
+    <script type="text/javascript" src="scripts/libs/jquery.dotdotdot.min.js"></script>
+    <!-- script(type="text/javascript" src="scripts/libs/aos.js")-->
     <script type="text/javascript" src="scripts/libs/selectize.min.js"></script>
     <script type="text/javascript" src="scripts/libs/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="scripts/libs/isotope.pkgd.min.js"></script>
     <!-- endbuild-->
     <!-- build:js scripts/main.js-->
     <script type="text/javascript" src="scripts/main.js"></script>

@@ -1,0 +1,95 @@
+//- title: Index Page
+extends layouts/_layout
+block head
+  - var title = 'Projects'
+  - var active = 5
+block content
+  // start projects
+  section.projects
+    h1.page-heading История успеха
+    .projects-filter
+      .inner
+        a.filter-item.active(data-filter="*" href="#") Все
+        a.filter-item(data-filter=".otrasli" href="#") По отраслям
+        a.filter-item(data-filter=".solution" href="#") По решениям
+    .projects-group
+      .grid
+        .projects-col.solution
+          a.projects-item(href="#")
+            .logo
+              img(src="images/project-logo1.jpg" alt="Ростелеком")
+            .projects-item-heading Cтроительство Зонового узла
+            p.projects-item-desc Строительство Сети Metro Ethernet
+            .circle
+              include data/arr-right.svg
+        .projects-col.otrasli
+          a.projects-item(href="#")
+            .logo
+              img(src="images/project-logo2.jpg" alt="Ростелеком")
+            .projects-item-heading организация узла связи
+            p.projects-item-desc г. Москва, Варшавское ш., д.118, БЦ « Варшавка Скай»
+            .circle
+              include data/arr-right.svg
+        .projects-col.otrasli
+          a.projects-item(href="#")
+            .logo
+              img(src="images/project-logo3.jpg" alt="Ростелеком")
+            .projects-item-heading телефонизация новостроек
+            p.projects-item-desc Строительство сети FTTB light по адресу МО
+            .circle
+              include data/arr-right.svg
+        .projects-col.solution
+          a.projects-item(href="#")
+            .logo
+              img(src="images/project-logo4.jpg" alt="Ростелеком")
+            .projects-item-heading модернизация систем связи
+            p.projects-item-desc Комплексная модернизация в ПАО «КАМАЗ»
+            .circle
+              include data/arr-right.svg
+        .projects-col.solution
+          a.projects-item(href="#")
+            .logo
+              img(src="images/project-logo5.jpg" alt="Ростелеком")
+            .projects-item-heading перевод ТС Ближнего Подмосковья
+            p.projects-item-desc Реконструкция сети DWDM, переключение абонентской емкости
+            .circle
+              include data/arr-right.svg
+        .projects-col
+          a.projects-item(href="#")
+            .logo
+              img(src="images/project-logo6.jpg" alt="Ростелеком")
+            .projects-item-heading строительство сети NGN Tatarstan
+            p.projects-item-desc Монтаж и пуско-наладка сети на 139 600 портов
+            .circle
+              include data/arr-right.svg
+        .projects-col.solution
+          a.projects-item(href="#")
+            .logo
+              img(src="images/project-logo1.jpg" alt="Ростелеком")
+            .projects-item-heading Cтроительство Зонового узла
+            p.projects-item-desc Строительство Сети Metro Ethernet
+            .circle
+              include data/arr-right.svg
+        .projects-col.otrasli
+          a.projects-item(href="#")
+            .logo
+              img(src="images/project-logo2.jpg" alt="Ростелеком")
+            .projects-item-heading организация узла связи
+            p.projects-item-desc г. Москва, Варшавское ш., д.118, БЦ « Варшавка Скай»
+            .circle
+              include data/arr-right.svg
+        .projects-col.otrasli
+          a.projects-item(href="#")
+            .logo
+              img(src="images/project-logo3.jpg" alt="Ростелеком")
+            .projects-item-heading телефонизация новостроек
+            p.projects-item-desc Строительство сети FTTB light по адресу МО
+            .circle
+              include data/arr-right.svg
+    // start projects-bottom
+    .projects-bottom 
+      a.btn.btn-mini.js-show-more(href="#")
+        span
+          include data/arr-down.svg
+    // end projects-bottom
+  // end projects
