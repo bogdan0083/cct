@@ -1,0 +1,83 @@
+//- title: Index Page
+extends layouts/_layout
+block head
+  - var title = 'About info'
+  - var active = 1
+  - var submenuActive = true
+  - var submenuIdx = 1
+block content
+  // start about
+  section.about
+    .container
+      h1.page-heading Руководство
+      .workers-group
+        .worker-item
+          .img
+            img(src='images/person1.jpg', alt='Паппе Наталья Николаевна')
+          .content
+            h4
+              | Паппе 
+              br
+              |  Наталья Николаевна
+            p Генеральный директор
+        .worker-item
+          .img
+            img(src='images/person2.jpg', alt='Паппе Cергей Андреевич')
+          .content
+            h4
+              | Паппе 
+              br
+              |  Cергей Андреевич
+            p Заместитель генерального директора
+        .worker-item
+          .img
+            img(src='images/person3.jpg', alt='Фильченков Роман Петрович')
+          .content
+            h4
+              | Фильченков 
+              br
+              |  Роман Петрович
+            p Исполнительный директор
+        .worker-item
+          .img
+            img(src='images/person4.jpg', alt='Помошников Игорь вячеславович')
+          .content
+            h4
+              | Помошников 
+              br
+              |  Игорь вячеславович
+            p Финансовый директор
+        .worker-item
+          .img
+            img(src='images/person5.jpg', alt='Попова Ирина Леонидовна')
+          .content
+            h4
+              | Попова 
+              br
+              |  Ирина Леонидовна
+            p Директор департамента продаж и маркетинга
+        .worker-item
+          .img
+            img(src='images/person6.jpg', alt='Бушмелов Сергей Александрович')
+          .content
+            h4
+              | Бушмелов 
+              br
+              |  Сергей Александрович
+            p Технический директор
+        .worker-item
+          .img
+            img(src='images/person7.jpg', alt='Овезов Борис Аманович')
+          .content
+            h4
+              | Овезов 
+              br
+              |  Борис Аманович
+            p Заместитель генерального директора
+      // start about-bottom
+      .about-bottom
+        a.btn.btn-mini.popup-link(href='popup-contact')
+          span
+            include data/arr-down.svg
+      // end about-bottom
+  // end about  

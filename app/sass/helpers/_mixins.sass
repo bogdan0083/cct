@@ -273,3 +273,20 @@
 
 =tr($props: all 0.3s 0s)
   transition: $props
+
+=button-reset()
+  padding: 0
+  bottom: 0
+  border: 0
+  background-color: transparent
+  display: inline-block
+  &:focus
+    outline: none
+
+=futura($weight: 400)
+  font-family: "Futura Medium C", Calibri, sans-serif
+  font-weight: $weight
+
+=agora($weight: 400)
+  font-family: "PF Agora Sans Pro", Calibri, sans-serif
+  font-weight: $weight

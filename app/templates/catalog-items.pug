@@ -1,0 +1,200 @@
+//- title: Index Page
+extends layouts/_layout
+block head
+  - var title = 'Catalog level 2'
+  - var active = 5
+block content
+  // start catalog-items
+  .catalog-items
+    // start top-block
+    section.top-block.top-block-items
+      // start top-block-image
+      .top-block-right
+        .background(style="background-image: url(images/catalog-img-full.jpg)")
+      // end top-block-image
+      // start top-block-left
+      .top-block-left
+        .inner
+          a.top-block-back(href="#")
+            .circle
+              include data/arr-left.svg
+            span Вернуться
+          h1.top-block-heading OpenScape Branch 50/250 V2
+          p.top-block-desc Современное универсальное решение унифицированных коммуникаций и совместной работы, специально разработанное для компаний малого и среднего бизнеса, имеющих один или несколько офисов, на базе сервера или виртуальной машины.     section.catalog-items-group
+      .container
+        h2.heading.heading-lined 
+          span OpenScape 4000
+        ul.list-reset.catalog-items-list
+          li
+            a(href="#")
+              .ic
+                include data/sd-card.svg
+              .item-name HiPath 4000 Распределительная панель 19" для AP3700IP/AP3700
+              .circle
+                include data/arr-right.svg
+          li
+            a(href="#")
+              .ic
+                include data/sd-card.svg
+              .item-name HiPath 3999 SLMOP Модуль 23 интерфейса UP-1/E, улучшенный
+              .circle
+                include data/arr-right.svg
+          li
+            a(href="#")
+              .ic
+                include data/sd-card.svg
+              .item-name HiPath Access PRI Транковый модуль 2 потоков E1(S2M)
+              .circle
+                include data/arr-right.svg
+          li
+            a(href="#")
+              .ic
+                include data/sd-card.svg
+              .item-name HiPath 4000 Распределительная панель 19" для AP3700IP/AP3700
+              .circle
+                include data/arr-right.svg
+          li
+            a(href="#")
+              .ic
+                include data/sd-card.svg
+              .item-name HiPath 4000 Распределительная панель 19" для AP3700IP/AP3700
+              .circle
+                include data/arr-right.svg
+          li
+            a(href="#")
+              .ic
+                include data/sd-card.svg
+              .item-name HiPath Access PRI Транковый модуль 2 потоков E1(S2M)
+              .circle
+                include data/arr-right.svg
+          li
+            a(href="#")
+              .ic
+                include data/sd-card.svg
+              .item-name HiPath 4000 Распределительная панель 19" для AP3700IP/AP3700
+              .circle
+                include data/arr-right.svg
+          li
+            a(href="#")
+              .ic
+                include data/sd-card.svg
+              .item-name HiPath Access PRI Транковый модуль 2 потоков E1(S2M)
+              .circle
+                include data/arr-right.svg
+          li
+            a(href="#")
+              .ic
+                include data/sd-card.svg
+              .item-name HiPath 4000 Распределительная панель 19" для AP3700IP/AP3700
+              .circle
+                include data/arr-right.svg
+          li
+            a(href="#")
+              .ic
+                include data/sd-card.svg
+              .item-name HiPath 4000 Распределительная панель 19" для AP3700IP/AP3700
+              .circle
+                include data/arr-right.svg
+          li
+            a(href="#")
+              .ic
+                include data/sd-card.svg
+              .item-name HiPath Access PRI Транковый модуль 2 потоков E1(S2M)
+              .circle
+                include data/arr-right.svg
+          li
+            a(href="#")
+              .ic
+                include data/sd-card.svg
+              .item-name HiPath 4000 Распределительная панель 19" для AP3700IP/AP3700
+              .circle
+                include data/arr-right.svg
+        .catalog-items-bottom
+          .pagination
+            ul.list-reset
+              li
+                a.active.pagination-item(href="#") 1
+              li
+                a.pagination-item(href="#") 2
+              li
+                a.pagination-item(href="#") 3
+              li
+                a.pagination-item(href="#") 4
+              li
+                a.pagination-item(href="#") 5
+              li
+                a.pagination-item(href="#") ...
+              li
+                a.pagination-item(href="#") 10
+              li
+                a.pagination-item.pagination-item-icon(href="#")
+                  include data/arr-high.svg
+              li
+                a.pagination-item.pagination-item-icon(href="#")
+                  include data/arr-double-high.svg
+          .catalog-show-amount
+            span Показывать по:
+            .items-amount-wrap
+              select.items-amount-select
+                option 12
+                option 25
+                option 50
+            
+  // end catalog-items
+  // start projects-history
+  section.projects-history
+    h3 История успеха
+    ul.projects-slider.list-reset
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo1.jpg" alt="Смартс")
+          h4 Cтроительство Зонового узла
+          p Строительство Сети Metro Ethernet
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo2.jpg" alt="Газпром")
+          h4 организация узла связи
+          p г. Москва, Варшавское ш., д.118, БЦ « Варшавка Скай»
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo3.jpg" alt="Ростелеком")
+          h4 телефонизация новостроек
+          p Строительство сети FTTB light по адресу МО
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo1.jpg" alt="Смартс")
+          h4 Cтроительство Зонового узла
+          p Строительство Сети Metro Ethernet
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo2.jpg" alt="Газпром")
+          h4 организация узла связи
+          p г. Москва, Варшавское ш., д.118, БЦ « Варшавка Скай»
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo3.jpg" alt="Ростелеком")
+          h4 телефонизация новостроек
+          p Строительство сети FTTB light по адресу МО
+          .circle
+            include data/arr-right.svg
+  // end projects-history
+  .breadcrumbs-bottom
+    ul.list-reset.breadcrumbs-list
+      li: a(href="#") Главная
+      li: a.current(href="#") Каталог

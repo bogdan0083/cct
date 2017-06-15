@@ -1,0 +1,17 @@
+- var menuArr = ['Главная', 'О компании', 'Решения и услуги', 'Отрасли', 'Проекты', 'Каталог', 'Партнеры', 'Пресс-центр', 'Контакт']
+- var submenuArr = ['Информация о компании', 'Руководство', 'Заказчики', 'Партнеры', 'Лицензии и сертификаты', 'Отзывы']
+.main-nav
+  ul.list-reset
+    for item, idx in menuArr
+      if (active === idx)
+        li: a.active(href="#"): span #{item}
+      else 
+        li: a(href="#"): span #{item}
+if (submenuActive)
+  nav.subnav
+    ul.list-reset
+      for item, idx in submenuArr
+        if (submenuIdx === idx)
+          li: a.active(href="#"): span #{item}
+        else 
+          li: a(href="#"): span #{item}

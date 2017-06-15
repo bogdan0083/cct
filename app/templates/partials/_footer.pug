@@ -15,14 +15,14 @@ footer.footer
         li: a(href="#"): span Пресс-центр
         li: a(href="#"): span Контакты
     aside.footer-aside
-      a.footer-contact-us.popup-link(href="#popup-contact")
+      a.footer-contact-us.popup-link(href="#popup-contact") Свяжитесь с нами
       a.phone(href="tel:+7(495)9261240")
         include ../data/phone.svg
         span +7 (495) 926 12 40
       a.mail(href="mailto:info@cctcom.ru") info@cctcom.ru
-      form.search-form
+      form.search-form-footer
         input.input.search-input(type="text" placeholder="Что будем искать?")
-        button.button-search
+        button.button-search.js-form-trigger
           include ../data/magnifier.svg
     .footer-bottom
       .socials

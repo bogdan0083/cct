@@ -1,0 +1,68 @@
+//- title: Index Page
+extends layouts/_layout
+block head
+  - var title = 'Partners'
+  - var active = 1
+  - var submenuActive = true
+  - var submenuIdx = 3
+block content
+  // start partners
+  section.partners 
+    .container
+      h1.page-heading Партнеры
+      .partners-group
+        .partner-item
+          img(src="images/partner1.jpg" alt="")
+        .partner-item
+          img(src="images/partner2.jpg" alt="")
+        .partner-item
+          img(src="images/partner3.jpg" alt="")
+        .partner-item
+          img(src="images/partner4.jpg" alt="")
+        .partner-item
+          img(src="images/partner5.jpg" alt="")
+        .partner-item
+          img(src="images/partner1.jpg" alt="")
+        .partner-item
+          img(src="images/partner1.jpg" alt="")
+        .partner-item
+          img(src="images/partner2.jpg" alt="")
+        .partner-item
+          img(src="images/partner3.jpg" alt="")
+        .partner-item
+          img(src="images/partner4.jpg" alt="")
+        .partner-item
+          img(src="images/partner5.jpg" alt="")
+        .partner-item
+          img(src="images/partner1.jpg" alt="")
+        .partner-item
+          img(src="images/partner1.jpg" alt="")
+        .partner-item
+          img(src="images/partner2.jpg" alt="")
+        .partner-item
+          img(src="images/partner3.jpg" alt="")
+        .partner-item
+          img(src="images/partner4.jpg" alt="")
+        .partner-item
+          img(src="images/partner5.jpg" alt="")
+        .partner-item
+          img(src="images/partner1.jpg" alt="")
+        .partner-item
+          img(src="images/partner1.jpg" alt="")
+        .partner-item
+          img(src="images/partner2.jpg" alt="")
+        .partner-item
+          img(src="images/partner3.jpg" alt="")
+        .partner-item
+          img(src="images/partner4.jpg" alt="")
+        .partner-item
+          img(src="images/partner5.jpg" alt="")
+        .partner-item
+          img(src="images/partner1.jpg" alt="")
+      // start partners-bottom
+      .partners-bottom 
+        a.btn.btn-mini.js-show-more
+          span
+            include data/arr-down.svg
+      // end partners-bottom
+  // end partners

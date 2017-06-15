@@ -2,6 +2,7 @@
 extends layouts/_layout
 block head
   - var title = 'Catalog'
+  - var active = 5
 block content
   // start catalog
   .catalog
@@ -9,121 +10,90 @@ block content
       h1.page-heading Каталог
       form.catalog-search
         input.input.search-input(type="text" placeholder="Поиск по названию")
-        button.button-search
+        button.form-button
           include data/magnifier.svg
       .catalog-group
         .row
-          .col-xs-12.col-sm-4.col-md-4.col-lg-4
+          .col-xs-12.col-sm-6.col-md-6.col-lg-4
             // start catalog-item
             .catalog-item 
               .catalog-image
                 img(src="images/cat-img1.jpg")
-              a.catalog-item-cat-link АТС
-              ul.list-reset.catalog-item-list
-                li: a(href="#") IP-УАТС 
-                li: a(href="#") OpenScape Voice 
-                li: a(href="#") OpenScape Business S 
-                li: a(href="#") OpenScape Office 
+              .inner
+                .catalog-item-title АТС
+                ul.list-reset.catalog-item-list
+                  li: a(href="#") IP-УАТС 
+                  li: a(href="#") OpenScape Voice 
+                  li: a(href="#") OpenScape Business S 
+                  li: a(href="#") OpenScape Office 
             // end catalog-item
-          .col-xs-12.col-sm-4.col-md-4.col-lg-4
+          .col-xs-12.col-sm-6.col-md-6.col-lg-4
             // start catalog-item
             .catalog-item 
               .catalog-image
                 img(src="images/cat-img2.jpg")
-              a.catalog-item-cat-link Цифровые АТС
-              ul.list-reset.catalog-item-list
-                li: a(href="#") OpenScape 4000 
-                li: a(href="#") OpenScape Business X3
-                li: a(href="#") OpenScape Business X5   /   OpenScape Business X8 
-                li: a(href="#") HiPath 3000   /   HiPath 4000
+              .inner
+                .catalog-item-title Цифровые АТС
+                ul.list-reset.catalog-item-list
+                  li: a(href="#") OpenScape 4000 
+                  li: a(href="#") OpenScape Business X3
+                  li: a(href="#") OpenScape Business X5   /   OpenScape Business X8 
+                  li: a(href="#") HiPath 3000   /   HiPath 4000
             // end catalog-item
-          .col-xs-12.col-sm-4.col-md-4.col-lg-4
+          .col-xs-12.col-sm-6.col-md-6.col-lg-4
             // start catalog-item
             .catalog-item 
               .catalog-image
                 img(src="images/cat-img3.jpg")
-              a.catalog-item-cat-link Унифицированные коммуникации
-              ul.list-reset.catalog-item-list
-                li: a(href="#") OpenScape Audio Conferencing
-                li: a(href="#") OpenScape Web Collaboration
-                li: a(href="#") OpenScape Desktop Videoconferencing
-                li: a(href="#") Circuit
+              .inner
+                .catalog-item-title Унифицированные коммуникации
+                ul.list-reset.catalog-item-list
+                  li: a(href="#") OpenScape Audio Conferencing
+                  li: a(href="#") OpenScape Web Collaboration
+                  li: a(href="#") OpenScape Desktop Videoconferencing
+                  li: a(href="#") Circuit
             // end catalog-item
-          .col-xs-12.col-sm-4.col-md-4.col-lg-4
+          .col-xs-12.col-sm-6.col-md-6.col-lg-4
             // start catalog-item
             .catalog-item 
               .catalog-image
                 img(src="images/cat-img1.jpg")
-              a.catalog-item-cat-link Телефонные аппараты
-              ul.list-reset.catalog-item-list
-                li: a(href="#") Телефонные аппараты
-                li: a(href="#") Цифровые телефоны
-                li: a(href="#") IP – телефоны
-                li: a(href="#") DECT
+              .inner
+                .catalog-item-title Телефонные аппараты
+                ul.list-reset.catalog-item-list
+                  li: a(href="#") Цифровые телефоны
+                  li: a(href="#") IP – телефоны
+                  li: a(href="#") DECT
             // end catalog-item
-          .col-xs-12.col-sm-4.col-md-4.col-lg-4
+          .col-xs-12.col-sm-6.col-md-6.col-lg-4
             // start catalog-item
             .catalog-item 
               .catalog-image
                 img(src="images/cat-img2.jpg")
-              a.catalog-item-cat-link Контакт-центры
-              ul.list-reset.catalog-item-list
-                li: a(href="#") Системная Лицензия Call Director OSCC Agile V8
-                li: a(href="#") Лицензия рабочего места Сотрудника OSCC ...
-                li: a(href="#") Лицензия рабочего места Сотрудника OSCC Agile V8 ...
+              .inner
+                .catalog-item-title Контакт-центры
+                ul.list-reset.catalog-item-list
+                  li: a(href="#") Системная Лицензия Call Director OSCC Agile V8
+                  li: a(href="#") Лицензия рабочего места Сотрудника OSCC ...
+                  li: a(href="#") Лицензия рабочего места Сотрудника OSCC Agile V8 ...
             // end catalog-item
-          .col-xs-12.col-sm-4.col-md-4.col-lg-4
+          .col-xs-12.col-sm-6.col-md-6.col-lg-4
             // start catalog-item
             .catalog-item 
               .catalog-image
                 img(src="images/cat-img3.jpg")
-              a.catalog-item-cat-link Система регистрации переговоров
-              ul.list-reset.catalog-item-list
-                li: a(href="#") Проф. системы аудиорегистрации «VOCORD Phobos»
-                li: a(href="#") Система записи разговоров «Phantom-Active Dispatcher»
-                li: a(href="#") Система записи разговоров АТС OpenScape Voice
-                li: a(href="#") «Phantom-Active OSV»
-            // end catalog-item
-          .col-xs-12.col-sm-4.col-md-4.col-lg-4
-            // start catalog-item
-            .catalog-item 
-              .catalog-image
-                img(src="images/cat-img1.jpg")
-              a.catalog-item-cat-link АТС
-              ul.list-reset.catalog-item-list
-                li: a(href="#") 
-                li: a(href="#") 
-                li: a(href="#") 
-                li: a(href="#") 
-            // end catalog-item
-          .col-xs-12.col-sm-4.col-md-4.col-lg-4
-            // start catalog-item
-            .catalog-item 
-              .catalog-image
-                img(src="images/cat-img2.jpg")
-              a.catalog-item-cat-link АТС
-              ul.list-reset.catalog-item-list
-                li: a(href="#") 
-                li: a(href="#") 
-                li: a(href="#") 
-                li: a(href="#") 
-            // end catalog-item
-          .col-xs-12.col-sm-4.col-md-4.col-lg-4
-            // start catalog-item
-            .catalog-item 
-              .catalog-image
-                img(src="images/cat-img3.jpg")
-              a.catalog-item-cat-link АТС
-              ul.list-reset.catalog-item-list
-                li: a(href="#") 
-                li: a(href="#") 
-                li: a(href="#") 
-                li: a(href="#") 
+              .inner
+                .catalog-item-title Система регистрации переговоров
+                ul.list-reset.catalog-item-list
+                  li: a(href="#") Проф. системы аудиорегистрации «VOCORD Phobos»
+                  li: a(href="#") Система записи разговоров «Phantom-Active Dispatcher»
+                  li: a(href="#") Система записи разговоров АТС OpenScape Voice «Phantom-Active OSV»
             // end catalog-item
     // start catalog-bottom
     .catalog-bottom
       a.btn.btn-mini.popup-link(href="popup-contact")
-        include data/envelope.svg
+        span
+          include data/envelope.svg
     // end catalog-bottom
   // end catalog
   // start projects-history
@@ -131,53 +101,53 @@ block content
     h3 История успеха
     ul.projects-slider.list-reset
       li.slide
-        a.projects-history-slider(href="#")
-        .logo
-          img(src="images/project-logo1.jpg" alt="Смартс")
-        h4 Cтроительство Зонового узла
-        p Строительство Сети Metro Ethernet
-        .circle
-          include data/arr-right.svg
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo1.jpg" alt="Смартс")
+          h4 Cтроительство Зонового узла
+          p Строительство Сети Metro Ethernet
+          .circle
+            include data/arr-right.svg
       li.slide
-        a.projects-history-slider(href="#")
-        .logo
-          img(src="images/project-logo2.jpg" alt="Газпром")
-        h4 организация узла связи
-        p г. Москва, Варшавское ш., д.118, БЦ « Варшавка Скай»
-        .circle
-          include data/arr-right.svg
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo2.jpg" alt="Газпром")
+          h4 организация узла связи
+          p г. Москва, Варшавское ш., д.118, БЦ « Варшавка Скай»
+          .circle
+            include data/arr-right.svg
       li.slide
-        a.projects-history-slider(href="#")
-        .logo
-          img(src="images/project-logo3.jpg" alt="Ростелеком")
-        h4 телефонизация новостроек
-        p Строительство сети FTTB light по адресу МО
-        .circle
-          include data/arr-right.svg
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo3.jpg" alt="Ростелеком")
+          h4 телефонизация новостроек
+          p Строительство сети FTTB light по адресу МО
+          .circle
+            include data/arr-right.svg
       li.slide
-        a.projects-history-slider(href="#")
-        .logo
-          img(src="images/project-logo1.jpg" alt="Смартс")
-        h4 Cтроительство Зонового узла
-        p Строительство Сети Metro Ethernet
-        .circle
-          include data/arr-right.svg
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo1.jpg" alt="Смартс")
+          h4 Cтроительство Зонового узла
+          p Строительство Сети Metro Ethernet
+          .circle
+            include data/arr-right.svg
       li.slide
-        a.projects-history-slider(href="#")
-        .logo
-          img(src="images/project-logo2.jpg" alt="Газпром")
-        h4 организация узла связи
-        p г. Москва, Варшавское ш., д.118, БЦ « Варшавка Скай»
-        .circle
-          include data/arr-right.svg
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo2.jpg" alt="Газпром")
+          h4 организация узла связи
+          p г. Москва, Варшавское ш., д.118, БЦ « Варшавка Скай»
+          .circle
+            include data/arr-right.svg
       li.slide
-        a.projects-history-slider(href="#")
-        .logo
-          img(src="images/project-logo3.jpg" alt="Ростелеком")
-        h4 телефонизация новостроек
-        p Строительство сети FTTB light по адресу МО
-        .circle
-          include data/arr-right.svg
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo3.jpg" alt="Ростелеком")
+          h4 телефонизация новостроек
+          p Строительство сети FTTB light по адресу МО
+          .circle
+            include data/arr-right.svg
   // end projects-history
   .breadcrumbs-bottom
     ul.list-reset.breadcrumbs-list

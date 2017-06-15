@@ -1,0 +1,113 @@
+/* start footer */
+.footer
+  padding: 30px 0
+  text-align: center
+  border-top: 1px solid #cedae5
+  .container
+    max-width: 1020px
+  +rmin($screen-sm)
+    padding-bottom: 60px
+  &-nav
+    display: none
+    width: 60%
+    text-align: left
+    +clr()
+    margin-top: 27px
+    &-list
+      float: left
+      width: 33.3333%
+    a
+      text-decoration: none
+      font-size: 17px
+      color: #000
+      display: block
+      span
+        position: relative
+        display: inline-block
+        padding: 10px 0
+        &:before
+          content: ''
+          bottom: 6px
+          left: 0
+          height: 2px
+          background-color: black
+          position: absolute
+          opacity: 0
+          width: 1px
+          +tr()
+      &:hover
+        span:before
+          opacity: 1
+          width: 100%
+    +rmin($screen-sm)
+      display: block
+      float: left
+  &-contact-us
+    font-size: 17px
+    color: #404041
+    text-decoration: none
+    border-bottom: 1px dashed #404041
+    +tr()
+    &:hover
+  .phone
+    display: block
+    font-size: 25px
+    text-decoration: none
+    letter-spacing: 1px
+    margin: 8px 0 0
+    +futura()
+    svg, span
+      display: inline-block
+      vertical-align: middle
+    svg
+      margin-right: 10px
+  .mail
+    color: #404041
+    font-size: 17px
+    text-decoration: none
+    margin-top: 2px
+    display: block
+  &-aside
+    +rmin($screen-sm)
+      float: right
+      text-align: right
+  &-bottom
+    padding-top: 40px
+    clear: both
+    +clr()
+/* end footer */
+
+/* start search-form-footer */
+.search-form-footer
+  position: relative
+  margin: 4px 0
+  width: 18px
+  display: inline-block
+  +tr()
+  +rmin($screen-sm)
+    width: 100%
+  .input.search-input
+    opacity: 0
+    transition: all 0.3s
+  button
+    position: absolute
+    right: 0
+    top: 0
+    height: 100%
+    line-height: 53px
+    cursor: pointer
+    +button-reset()
+    +tr()
+    &:hover, &.js-active
+      svg path
+        stroke: $color-red
+  &.js-active
+    width: 100%
+    margin-top: 10px
+    .input
+      opacity: 1
+      width: 100%
+      transition: visibility 0.01s, opacity 0.3s 0.01s, width 0.3s 0.01s
+    button
+      right: 20px
+/* end search-form-footer */

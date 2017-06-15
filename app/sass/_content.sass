@@ -1,5 +1,610 @@
-.block
-  display: flex
+/* start catalog-search */
+.catalog-search
+  text-align: center
+  position: relative
+  max-width: 540px
+  margin: -10px auto 40px
+  +rmin($screen-sm)
+    margin-top: 0
+.form-button
+  height: 100%
+  line-height: 54px
+  position: absolute
+  right: 0
+  top: 0
+  width: 60px
+  text-align: center
+  +button-reset()
+  border-left: 1px solid #d2dfe8
+  border-radius: 0 30px 30px 0
+  cursor: pointer
+  +tr()
+  svg path
+    stroke: $color-red
+  &:hover
+    background-color: darken(#eef6fb, 10%)
+/* end catalog-search */
 
-.block-asd
-  position: statics
+.catalog
+  margin-bottom: 40px
+  +rmin($screen-sm)
+    margin-bottom: 60px
+
+/* start catalog-item */
+.catalog-item
+  max-width: 526px
+  margin: 12px auto
+  background-color: white
+  text-align: center
+  .catalog-image
+    display: block
+    overflow: hidden
+    img
+      width: 100%
+      display: block
+  .inner
+    padding: 30px 0
+    border: 1px solid #b0c6d3
+    padding-left: 20px
+    padding-right: 20px
+    +rmin($screen-sm)
+      padding-top: 60px
+      min-height: 320px
+      padding-bottom: 0
+      padding-left: 10px
+      padding-right: 10px
+    +rmin($screen-lg)
+      padding-left: 50px
+      padding-right: 50px
+  &-title
+    +futura()
+    font-size: 18px
+    text-transform: uppercase
+    letter-spacing: 1px
+    padding-bottom: 14px
+    position: relative
+    margin-bottom: 10px
+    &:after
+      content: ''
+      position: absolute
+      left: 50%
+      bottom: 0
+      background-color: #bc324e
+      width: 166px
+      height: 1px
+      margin-left: -83px
+  &-list
+    a
+      text-decoration: none
+      color: #153a62
+      padding: 8px 0
+      display: block
+      line-height: 1.4
+      +tr()
+      &:hover
+        color: black
+/* end catalog-item */
+
+/* start catalog-bottom */
+.catalog-bottom
+  margin-top: 50px
+  +rmin($screen-sm)
+    margin-top: 70px
+/* end catalog-bottom */
+
+
+/* start projects-history */
+.projects-history
+  text-align: center
+  background-color: #fff
+  padding: 40px 0
+  +rmin($screen-sm)
+    padding-top: 60px
+    padding-bottom: 70px
+  .slide
+    padding-bottom: 30px
+  &-slide
+    text-decoration: none
+    display: block
+    height: 190px
+    border-bottom: 1px solid #dce2e8
+    position: relative
+    &:hover
+      .circle
+        transform: rotate(-360deg) scale(1.1)
+        background-color: #fff
+        svg path
+          fill: $color-red
+  .logo
+    height: 60px
+    position: relative
+    img
+      display: inline-block
+      margin: auto
+      top: 0
+      bottom: 0
+      right: 0
+      left: 0
+      position: absolute
+  h3
+    margin-top: 0
+    text-transform: uppercase
+    font-size: 22px
+    letter-spacing: 1px
+    margin-bottom: 30px
+  h4
+    font-size: 17px
+    color: #0a1623
+    text-transform: uppercase
+    margin-bottom: 0
+    letter-spacing: 1px
+  p
+    margin: 0
+    opacity: .7
+    color: #131313
+    font-size: 14px
+    +rmin($screen-sm)
+      font-size: 15px
+  .circle
+    width: 36px
+    height: 36px
+    border-radius: 50%
+    border: 1px solid #b92845
+    background-color: #b92845
+    position: absolute
+    left: 50%
+    bottom: -17px
+    margin-left: -18px
+    +tr()
+    svg
+      position: absolute
+      margin: auto
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      path
+        +tr()
+/* end projects-history */
+
+/* start breadcrumbs-bottom */
+.breadcrumbs-bottom
+  text-align: center
+  padding: 10px 0
+  li
+    display: inline-block
+    &:first-child
+      a
+        padding-left: 18px
+        &:before
+          content: ''
+          top: 50%
+          left: 0
+          width: 11px
+          height: 9px
+          margin-top: -5px
+          background-image: url(../images/home.svg)
+          position: absolute
+    &:last-child
+      a
+        color: #575757
+        padding-right: 0
+        &:after
+          display: none
+  a
+    display: inline-block
+    position: relative
+    font-size: 12px
+    padding: 10px 60px 10px 0
+    text-decoration: none
+    color: #9d9d9d
+    +tr()
+    &:after
+      content: ''
+      position: absolute
+      top: 50%
+      right: 11px
+      margin-top: -2px
+      width: 33px
+      height: 5px
+      background-image: url(../images/arr-long-right.png)
+    &:hover
+      color: #575757
+/* end breadcrumbs-bottom */
+.top-block
+  position: relative
+  background-color: white
+  +clr()
+  &-right
+    position: relative
+    &.top-block-img
+      padding-top: 40px
+      &:before
+        display: none
+    &:before
+      display: block
+      content: ""
+      width: 100%
+      padding-top: (455 / 958) * 100%
+      +rmin($screen-sm)
+        display: none
+    +rmin($screen-sm)
+      position: absolute
+      width: 50%
+      height: 100%
+      right: 0
+      top: 0
+      img
+        position: absolute
+        left: 0
+        bottom: 30px
+  .background
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+  &-left
+    padding: 30px 15px
+    background-color: #fff
+    +rmin($screen-sm)
+      width: 50%
+      float: left
+    +rmin($screen-md)
+      padding-right: 60px
+      padding-top: 26px
+      padding-bottom: 50px
+    +rmin($screen-lg)
+      padding-right: 70px
+    .inner
+      +rmin($screen-sm)
+        float: right
+        max-width: 500px
+        width: 100%
+  &-back
+    display: inline-block
+    width: 174px
+    line-height: 56px
+    +rmin($screen-sm)
+      border-bottom: 1px solid #b62c45
+      text-align: center
+      margin-left: -24px
+    &:hover
+      .circle
+        transform: scale(1.2) rotate(360deg)
+        background-color: #b92845
+        svg path
+          fill: white
+    span
+      display: inline-block
+      vertical-align: middle
+    .circle
+      width: 28px
+      height: 28px
+      border-radius: 50%
+      border: 1px solid #b92845
+      background-color: transparent
+      display: inline-block
+      vertical-align: middle
+      margin-right: 16px
+      position: relative
+      +tr()
+      svg
+        position: absolute
+        margin: auto
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        +tr()
+        path
+          fill: $color-red
+          +tr()
+  &-article
+    opacity: .5
+    color: #535353
+    margin-top: 10px
+    margin-bottom: -10px
+    +rmin($screen-sm)
+      margin-top: 30px
+  &-heading
+    color: #153a62
+    padding-bottom: 20px
+    margin-bottom: 32px
+    position: relative
+    line-height: 1.3
+    text-transform: uppercase
+    letter-spacing: 1px
+    +rmin($screen-sm)
+      font-size: 36px
+      width: 400px
+    &:before
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 170px
+      height: 1px
+      background-color: #c0d0dd
+      opacity: .7
+  &-desc
+    color: #535353
+    line-height: 1.4
+    margin-bottom: 0
+
+.catalog-items
+  padding: 0 0 40px
+  +rmin($screen-sm)
+    padding-bottom: 40px
+  &-group
+    padding-top: 30px
+    text-align: center
+    +rmin($screen-sm)
+      padding-top: 50px
+  &-list
+    margin-top: 50px
+    +rmin($screen-sm)
+      margin-top: 60px
+    a
+      border: 1px solid #afc5d3
+      display: block
+      padding: 20px 20px
+      text-decoration: none
+      font-size: 17px
+      text-transform: uppercase
+      margin: 10px 0
+      background-color: #fff
+      color: #0a1623
+      position: relative
+      +futura()
+      +tr()
+      .ic
+        margin-bottom: 10px
+        svg
+          opacity: .5
+          +tr()
+        +rmin($screen-sm)
+          position: absolute
+          left: 0
+          top: 0
+          height: 100%
+          text-align: center
+          width: 77px
+          margin-bottom: 0
+          border-right: 1px solid $color-red
+          svg
+            position: absolute
+            margin: auto
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+      &:hover
+        border-color: darken(#afc5d3, 30%)
+        .ic svg
+          opacity: 1
+        .circle
+          transform: scale(1.2) rotate(360deg)
+          background-color: #b92845
+          svg path
+            fill: white
+      +rmin($screen-sm)
+        padding-left: 112px
+        padding-right: 80px
+        padding-top: 24px
+        padding-bottom: 24px
+        text-align: left
+      +futura()
+    .circle
+      width: 36px
+      height: 36px
+      border-radius: 50%
+      border: 1px solid #b92845
+      background-color: transparent
+      display: inline-block
+      vertical-align: middle
+      margin-top: 20px
+      position: relative
+      +tr()
+      svg
+        position: absolute
+        margin: auto
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        +tr()
+        path
+          fill: $color-red
+          +tr()
+      +rmin($screen-sm)
+        position: absolute
+        right: 28px
+        top: 50%
+        margin-top: -18px
+
+.catalog-items-bottom
+  margin-top: 50px
+  padding-bottom: 40px
+  +clr()
+/* start pagination */
+.pagination
+  border: 1px solid #aec5d3
+  text-align: left
+  padding-right: 12px
+  display: inline-block
+  +rmin($screen-sm)
+    float: left
+  ul
+    display: block
+  li
+    display: inline-block
+  &-item
+    display: block
+    width: 26px
+    line-height: 34px
+    text-decoration: none
+    text-align: center
+    color: #67707b
+    margin-top: -1px
+    margin-left: -1px
+    +futura()
+    +tr()
+    &.active
+      border: 2px solid $color-red
+      color: black
+    &:hover
+      color: black
+    &-icon
+      width: 20px
+    +rmin($screen-sm)
+      width: 39px
+      height: 40px
+      line-height: 36px
+      margin-bottom: -3px
+      &-icon
+        width: 26px
+/* end pagination */
+
+/* start catalog-show-amount */
+.catalog-show-amount
+  text-align: center
+  margin-top: 20px
+  > span
+    font-size: 15px
+    opacity: .7
+    display: inline-block
+    vertical-align: middle
+  +rmin($screen-sm)
+    float: right
+    margin-top: 0
+
+.items-amount-wrap
+  display: inline-block
+  vertical-align: middle
+  margin-left: 10px
+  height: 36px
+  width: 65px
+  text-align: left
+/* end catalog-show-amount */
+
+.selectize-control.single
+  .selectize-input
+    display: block
+    background: none
+    background-color: transparent
+    border-radius: 0
+    border-color: #aec5d3
+    font-size: 17px
+    color: #0a1623
+    padding-top: 9px
+    padding-bottom: 9px
+    +futura()
+    input
+      display: none !important
+    &.dropdown-active
+      &:after
+        transform: rotate(-180deg) translateY(-2px)
+
+
+.item-description
+  color: #535353
+  padding-bottom: 40px
+  line-height: 1.5
+  +rmin($screen-sm)
+    padding-top: 10px
+    padding-bottom: 60px
+    .container
+      max-width: 1240px
+
+
+.about
+  padding-top: 10px
+  padding-bottom: 40px
+  +rmin($screen-sm)
+    padding-bottom: 90px
+
+/* start worker-item */
+.workers-group
+  text-align: center
+
+.worker-item
+  max-width: 385px
+  display: inline-block
+  vertical-align: top
+  background-color: #fff
+  text-align: center
+  margin-bottom: 60px
+  +rmin($screen-xs)
+    margin-left: 10px
+    margin-right: 10px
+  .img
+    img
+      display: block
+  .content
+    padding: 40px 0
+    border: 1px solid #b1c6d4
+    +rmin($screen-sm)
+      min-height: 220px
+      padding-bottom: 10px
+  h4
+    letter-spacing: 1px
+    text-transform: uppercase
+    font-size: 18px
+    line-height: 1.7
+    position: relative
+    margin-top: 0
+    margin-bottom: 12px
+    padding-bottom: 16px
+    +futura()
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 50%
+      background-color: #b62c45
+      width: 166px
+      height: 1px
+      margin-left: -83px
+  p
+    margin-top: 0
+    margin-bottom: 0
+    font-size: 15px
+    color: #6d6d6d
+/* end worker-item */
+
+.partners
+  padding-top: 10px
+  padding-bottom: 30px
+  +rmin($screen-sm)
+    padding-bottom: 80px
+  &-bottom
+    margin-top: 40px
+.partners-group
+  text-align: center
+/* start partner-item */
+.partner-item
+  width: 170px
+  height: 170px
+  display: inline-block
+  background-color: white
+  position: relative
+  border: 1px solid #afc5d3
+  margin: 10px 10px
+  img
+    max-width: 90%
+    max-height: 90%
+    position: absolute
+    margin: auto
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+  +rmin($screen-sm)
+    width: 233px
+    height: 204px
+/* end partner-item */
