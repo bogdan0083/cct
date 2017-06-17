@@ -1,0 +1,180 @@
+//- title: Index Page
+extends layouts/_layout
+block head
+  - var title = 'Departments'
+  - var active = 7
+block content
+  // start departments
+  section.departments
+    .container
+      h1.page-heading Отрасли
+      .departments-group
+        .row
+          .col-xs-12.col-sm-6.col-md-4.col-lg-4
+            // start departments-item
+            .departments-item 
+              .departments-image
+                img(src="images/cat-img1.jpg" alt="")
+              .content
+                .wrap
+                  a.departments-item-link(href="#"): span Государственный сектор
+                  .departments-item-desc Построение телекоммуникационных,  инженерных систем и систем безопасности.
+                  .circle
+                    include data/arr-right.svg  
+            // end departments-item
+          .col-xs-12.col-sm-6.col-md-4.col-lg-4
+            // start departments-item
+            .departments-item 
+              .departments-image
+                img(src="images/cat-img2.jpg" alt="")
+              .content
+                .wrap
+                  a.departments-item-link(href="#"): span Нефтегазовая отрасль
+                  .departments-item-desc Построение телекоммуникационных,  инженерных систем и систем безопасности.
+                  .circle
+                    include data/arr-right.svg  
+            // end departments-item
+          .col-xs-12.col-sm-6.col-md-4.col-lg-4
+            // start departments-item
+            .departments-item 
+              .departments-image
+                img(src="images/cat-img3.jpg" alt="")
+              .content
+                .wrap
+                  a.departments-item-link(href="#"): span Телекоммуникации
+                  .departments-item-desc Построение телекоммуникационных,  инженерных систем и систем безопасности.
+                  .circle
+                    include data/arr-right.svg  
+            // end departments-item
+          .col-xs-12.col-sm-6.col-md-4.col-lg-4
+            // start departments-item
+            .departments-item 
+              .departments-image
+                img(src="images/cat-img1.jpg" alt="")
+              .content
+                .wrap
+                  a.departments-item-link(href="#"): span Финансовые институты
+                  .departments-item-desc Построение телекоммуникационных,  инженерных систем и систем безопасности.
+                  .circle
+                    include data/arr-right.svg  
+            // end departments-item
+          .col-xs-12.col-sm-6.col-md-4.col-lg-4
+            // start departments-item
+            .departments-item 
+              .departments-image
+                img(src="images/cat-img2.jpg" alt="")
+              .content
+                .wrap
+                  a.departments-item-link(href="#"): span Энергетика
+                  .departments-item-desc Построение телекоммуникационных,  инженерных систем и систем безопасности.
+                  .circle
+                    include data/arr-right.svg  
+            // end departments-item
+          .col-xs-12.col-sm-6.col-md-4.col-lg-4
+            // start departments-item
+            .departments-item 
+              .departments-image
+                img(src="images/cat-img3.jpg" alt="")
+              .content
+                .wrap
+                  a.departments-item-link(href="#"): span Промышленность
+                  .departments-item-desc Построение телекоммуникационных,  инженерных систем и систем безопасности.
+                  .circle
+                    include data/arr-right.svg  
+            // end departments-item
+          .col-xs-12.col-sm-6.col-md-4.col-lg-4
+            // start departments-item
+            .departments-item 
+              .departments-image
+                img(src="images/cat-img1.jpg" alt="")
+              .content
+                .wrap
+                  a.departments-item-link(href="#"): span Здравоохранение
+                  .departments-item-desc Построение телекоммуникационных,  инженерных систем и систем безопасности.
+                  .circle
+                    include data/arr-right.svg  
+            // end departments-item
+          .col-xs-12.col-sm-6.col-md-4.col-lg-4
+            // start departments-item
+            .departments-item 
+              .departments-image
+                img(src="images/cat-img2.jpg" alt="")
+              .content
+                .wrap
+                  a.departments-item-link(href="#"): span Гостиничный бизнес
+                  .departments-item-desc Построение телекоммуникационных,  инженерных систем и систем безопасности.
+                  .circle
+                    include data/arr-right.svg  
+            // end departments-item
+          .col-xs-12.col-sm-6.col-md-4.col-lg-4
+            // start departments-item
+            .departments-item 
+              .departments-image
+                img(src="images/cat-img3.jpg" alt="")
+              .content
+                .wrap
+                  a.departments-item-link(href="#"): span Ритейл
+                  .departments-item-desc Построение телекоммуникационных,  инженерных систем и систем безопасности.
+                  .circle
+                    include data/arr-right.svg  
+            // end departments-item
+      // start departments-bottom
+      .bottom-block
+        a.btn.btn-mini.popup-link(href="#popup-contact")
+          span
+            include data/envelope.svg
+      // end departments-bottom
+  // end departments
+  // start projects-history
+  section.projects-history
+    h3 История успеха
+    ul.projects-slider.list-reset
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo1.jpg" alt="Смартс")
+          h4 Cтроительство Зонового узла
+          p Строительство Сети Metro Ethernet
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo2.jpg" alt="Газпром")
+          h4 организация узла связи
+          p г. Москва, Варшавское ш., д.118, БЦ « Варшавка Скай»
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo3.jpg" alt="Ростелеком")
+          h4 телефонизация новостроек
+          p Строительство сети FTTB light по адресу МО
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo1.jpg" alt="Смартс")
+          h4 Cтроительство Зонового узла
+          p Строительство Сети Metro Ethernet
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo2.jpg" alt="Газпром")
+          h4 организация узла связи
+          p г. Москва, Варшавское ш., д.118, БЦ « Варшавка Скай»
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo3.jpg" alt="Ростелеком")
+          h4 телефонизация новостроек
+          p Строительство сети FTTB light по адресу МО
+          .circle
+            include data/arr-right.svg
+  // end projects-history

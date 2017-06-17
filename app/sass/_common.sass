@@ -1,5 +1,7 @@
 +font('Futura Medium C', 'futuramediumc-webfont')
 +font('PF Agora Sans Pro', 'pfagorasanspro-reg-webfont')
+// TODO: refactor .circle element. Too much selector repeats
+
 html
   box-sizing: border-box
   +rmin($screen-sm)
@@ -133,6 +135,8 @@ img
   text-align: center
   position: relative
   overflow: hidden
+  background-color: transparent
+  cursor: pointer
   &:before
     content: ''
     top: 0

@@ -6,6 +6,7 @@
   margin: -10px auto 40px
   +rmin($screen-sm)
     margin-top: 0
+
 .form-button
   height: 100%
   line-height: 54px
@@ -268,6 +269,7 @@
     display: inline-block
     width: 174px
     line-height: 56px
+    margin-bottom: 10px
     +rmin($screen-sm)
       border-bottom: 1px solid #b62c45
       text-align: center
@@ -335,6 +337,12 @@
     color: #535353
     line-height: 1.4
     margin-bottom: 0
+  &-project
+    .top-block-heading
+      width: 100%
+    .top-block-desc
+      +rmin($screen-sm)
+        max-width: 420px
 
 .catalog-items
   padding: 0 0 40px
@@ -963,3 +971,309 @@
       path
         +tr()
 /* end projects-item */
+
+.project
+  padding-bottom: 40px
+  +rmin($screen-sm)
+    padding-bottom: 80px
+  &-bottom
+    margin-top: 30px
+/* start project-promo */
+.project-promo, .department-promo
+  text-align: center
+  padding: 40px 0
+  border-bottom: 1px solid #cddce7
+  color: rgba(#232323, .8)
+  .container
+    max-width: 900px
+  .logo
+    margin-bottom: 20px
+  .text
+    letter-spacing: 2px
+    text-transform: uppercase
+    line-height: 1.9
+    +futura()
+  +rmin($screen-sm)
+    padding-top: 70px
+    padding-bottom: 70px
+/* end project-promo */
+
+/* start custom-section */
+.custom-section
+  padding: 40px 0
+  border-bottom: 1px solid #cddce7
+  line-height: 1.7
+  &.no-border
+    border-bottom: 0
+  &:last-of-type
+    border-bottom: 0
+  .container
+    max-width: 1190px
+  .row
+    +rmin($screen-sm)
+      margin-left: -40px
+      margin-right: -40px
+      > div
+        padding-right: 30px
+        padding-left: 30px
+/* end custom-section */
+
+.departments, .department
+  padding-bottom: 40px
+  +rmin($screen-sm)
+    padding-bottom: 80px
+
+/* start departments-item */
+.departments-item
+  max-width: 526px
+  margin: 12px auto
+  background-color: white
+  text-align: center
+  position: relative
+  &:hover
+    .departments-image:before
+      opacity: 0
+    img
+      transform: scale(1.2) translateZ(0)
+    .circle
+      background-color: $color-red
+      transform: scale(1.2) rotate(360deg)
+      svg path
+        fill: white
+  .departments-image
+    display: block
+    overflow: hidden
+    position: relative
+    &:before
+      content: ''
+      background-color: #153a62
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      position: absolute
+      opacity: .2
+      transition: opacity 0.3s 0.01s
+      z-index: 1
+      +gpu()
+    img
+      width: 100%
+      display: block
+      +tr()
+  .content
+    padding: 30px 0
+    border: 1px solid #b0c6d3
+    padding-left: 20px
+    padding-right: 20px
+    +rmin($screen-sm)
+      padding-top: 0
+      padding-bottom: 0
+      height: 290px
+      display: table
+      width: 100%
+      .wrap
+        display: table-cell
+        vertical-align: middle
+    +rmin($screen-md)
+      padding-left: 30px
+      padding-right: 30px
+    +rmin($screen-lg)
+      padding-left: 78px
+      padding-right: 78px
+  &-link
+    +futura()
+    font-size: 15px
+    color: #21446b
+    text-transform: uppercase
+    letter-spacing: 1px
+    margin-bottom: 0
+    display: block
+    line-height: 1.6
+    overflow: hidden
+    margin-bottom: 20px
+    text-decoration: none
+    span
+      position: relative
+      padding-bottom: 17px
+      display: block
+      &:after
+        content: ''
+        bottom: 0
+        left: 50%
+        background-color: #bc324e
+        position: absolute
+        width: 166px
+        height: 1px
+        margin-left: -83px
+    +rmin($screen-sm)
+      font-size: 18px
+    &:before
+      content: ''
+      top: 0
+      left: 0
+      position: absolute
+      width: 100%
+      height: 100%
+      z-index: 5
+  &-desc
+    font-size: 15px
+    color: #6d6d6d
+    font-weight: 300
+    padding-bottom: 14px
+    display: block
+    position: relative
+    line-height: 1.4
+  .circle
+    width: 28px
+    height: 28px
+    border-radius: 50%
+    border: 1px solid #b92845
+    background-color: transparent
+    display: inline-block
+    vertical-align: middle
+    margin: 10px auto 0
+    position: relative
+    +tr()
+    svg
+      position: absolute
+      margin: auto
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      +tr()
+      path
+        fill: $color-red
+        +tr()
+/* end departments-item */
+
+.bottom-block
+  margin-top: 40px
+  +rmin($screen-sm)
+    margin-top: 70px
+
+.department-promo
+  .container
+    max-width: 1190px
+
+.docs
+  .container
+    max-width: 1400px
+  .row > div
+    +rmin($screen-md)
+      &:last-child
+        .doc:after
+          display: none
+
+.doc
+  text-decoration: none
+  display: block
+  text-align: center
+  margin: 20px 0
+  +rmin($screen-md)
+    position: relative
+    &:after
+      content: ''
+      bottom: 26px
+      right: -15px
+      background-color: #bacddd
+      height: 107px
+      width: 1px
+      position: absolute
+  .desc
+    margin-top: 8px
+    color: rgba(#0a1623, .9)
+    margin-bottom: 20px
+    +tr()
+  .download-text
+    color: #153a62
+    +tr()
+  &:hover
+    .download-text
+      color: $color-red
+    .desc
+      color: rgba(#0a1623, 1)
+
+/* start contact-section */
+.contact-section
+  text-align: center
+  background-color: #fff
+  border: 1px solid #b1c6d4
+  padding-top: 20px
+  margin-bottom: 40px
+  +rmin($screen-sm)
+    padding-top: 50px
+  svg path
+    fill: #b4294b
+  &.secondary
+    svg path
+      fill: #153a62
+  .top, .contact-block
+    margin-left: 10px
+    margin-right: 10px
+    +rmin($screen-sm)
+      margin-left: 40px
+      margin-right: 40px
+  .top
+    border-bottom: 1px solid $color-red
+    padding-bottom: 10px
+    margin-bottom: 4px
+    h3
+      margin: 4px 0 0 0
+      font-size: 28px
+      letter-spacing: 1px
+      text-transform: uppercase
+  span
+    display: inline-block
+  p
+    margin: 0
+    font-size: 14px
+    color: #0a1623
+    text-transform: uppercase
+    display: inline-block
+    vertical-align: middle
+    +futura()
+    +rmin($screen-sm)
+      font-size: 16px
+  h5
+    margin: 0
+    font-size: 14px
+    color: #6d6d6d
+    font-family: 'Calibri', 'Calibri Custom', sans-serif
+    +rmin($screen-sm)
+      font-size: 15px
+  .separator
+    color: #c3c3c3
+    margin: 0 4px
+    display: inline-block
+    +rmin($screen-sm)
+      margin-left: 14px
+      margin-right: 14px
+  .contact-block
+    position: relative
+    padding: 20px 0
+    &-worktime:after
+      display: none
+    &:after
+      content: ''
+      bottom: 0
+      left: 50%
+      background-color: #d5dfe8
+      height: 1px
+      width: 170px
+      margin-left: -85px
+      position: absolute
+  .contact-map
+    height: 300px
+    margin-top: 40px
+    +rmin($screen-sm)
+      height: 428px
+      margin-top: 70px
+  .worktime
+    display: block
+    +rmin($screen-sm)
+      display: inline-block
+      margin-right: 16px
+    span
+      color: #6d6f72
+/* end contact-section */

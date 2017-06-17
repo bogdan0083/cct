@@ -1,0 +1,167 @@
+//- title: Index Page
+extends layouts/_layout
+block head
+  - var title = 'Department Single'
+  - var active = 5
+block content
+  // start department
+  section.department
+    // start top-block
+    .top-block.top-block-project
+      // start top-block-image
+      .top-block-right
+        .background(style="background-image: url(images/catalog-img-full.jpg)")
+      // end top-block-image
+      // start top-block-left
+      .top-block-left
+        .inner
+          a.top-block-back(href='#')
+            .circle
+              include data/arr-left.svg
+            span Вернуться
+          h1.top-block-heading Информационно- вычислительные комплексы 
+          p.top-block-desc Построение телекоммуникационных, информационных, инженерных систем и систем безопасности
+    // start department-promo
+    .department-promo
+      .container
+        .text Система охранная телевизионная (СОТ) — вид системы безопасности, обеспечивающий постоянный визуальный контроль над определенной территорией в целях моментального реагирования на непредвиденные ситуации. СОТ позволяет значительно повысить эффективность охраны на объекте и сократить время принятия решения при возникновении внештатной ситуации.
+    // end department-promo
+    section.custom-section.no-border
+      .container
+        h2.heading.heading-lined Решения и результаты
+        .row
+          .col-sm-6.col-md-6.col-lg-6
+            | Видеокамера: первичный источник видеосигнала, который преобразует оптическое изображение в электрический видеосигнал:
+            ul.custom-list.nomargin 
+              li бескорпусные или корпусные;
+              li  цветного или черно-белого изображения;
+              li с режимом день/ночь;
+              li повышенной или обычной чувствительности;
+              li высокого или обычного разрешения;
+              li наружного или внутреннего наблюдения.
+            | Видеорегистратор: устройство, предназначенное для записи, воспроизведения и хранения видеоинформации.
+          .col-sm-6.col-md-6.col-lg-6
+            | Видеорегистратор:устройство, предназначенное для записи, воспроизведения и хранения видеоинформации.
+            br
+            | Видеомонитор:устройство отображения видеоинформации.
+            br
+            | Дополнительные элементы:
+            ul.custom-list.nomargin
+              li система распознавания лиц;
+              li система регистрации государственных номерных знаков на автомобилях;
+              li система подключения к POS-терминалам (мобильный платежный 
+              li терминал, кассовый аппарат и пр., который считывает информацию 
+              li банковской карты и связывается с банком, как правило с помощью GSM)
+    section.custom-section.no-border
+      .container
+        h2.heading.heading-lined Задачи системы видеонаблюдения
+        .row
+          .col-xs-12.col-sm-4.col-md-4.col-lg-4 Получение документального материала, позволяющего анализировать произошедшие на определенном участке события;
+          .col-xs-12.col-sm-4.col-md-4.col-lg-4 Снижение уровня возникновения внештатных ситуаций и оперативное предупреждение сотрудников
+          .col-xs-12.col-sm-4.col-md-4.col-lg-4 Наблюдение за обстановкой в любом помещении здания и за удаленными объектами;
+    section.custom-section.no-border
+      .container
+        h2.heading.heading-lined Преимущества системы видеонаблюдения
+        .row
+          .col-sm-6.col-md-6.col-lg-6
+            | Возможность просмотра записанного материала: архив видеоматериалов можно просмотреть в любой момент времени.
+            br
+            br
+            | Оперативная оценка ситуации: система видеонаблюдения позволяет быстро оценить обстановку на всем объекте при возникновении чрезвычайной ситуации.
+          .col-sm-6.col-md-6.col-lg-6
+            | Отсутствие «человеческого фактора»: запись производится круглосуточно.
+            br
+            br
+            | Возможность наблюдения в опасных зонах: можно наблюдать за помещениями, не безопасными для человека (вероятность газового отравления или высокого облучение).
+    section.docs
+      .container
+        h2.heading.heading-lined Материалы
+        .row
+          .col-xs-6.col-sm-6.col-md-3.col-lg-3
+            a.doc(href="#")
+              .doc-icon
+                img(src="images/doc.png")
+              .desc Система управления #[br] SIM-картами
+              .download-text Скачать
+          .col-xs-6.col-sm-6.col-md-3.col-lg-3
+            a.doc(href="#")
+              .doc-icon
+                img(src="images/doc.png")
+              .desc Система управления #[br] SIM-картами
+              .download-text Скачать
+          .col-xs-6.col-sm-6.col-md-3.col-lg-3
+            a.doc(href="#")
+              .doc-icon
+                img(src="images/doc.png")
+              .desc Система управления #[br] SIM-картами
+              .download-text Скачать
+          .col-xs-6.col-sm-6.col-md-3.col-lg-3
+            a.doc(href="#")
+              .doc-icon
+                img(src="images/doc.png")
+              .desc Система управления #[br] SIM-картами
+              .download-text Скачать
+    .bottom-block
+      a.btn.btn-mini.popup-link(href="popup-contact")
+        span
+          include data/envelope.svg
+    
+          
+  // end department
+  // start projects-history
+  section.projects-history
+    h3 История успеха
+    ul.projects-slider.list-reset
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo1.jpg" alt="Смартс")
+          h4 Cтроительство Зонового узла
+          p Строительство Сети Metro Ethernet
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo2.jpg" alt="Газпром")
+          h4 организация узла связи
+          p г. Москва, Варшавское ш., д.118, БЦ « Варшавка Скай»
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo3.jpg" alt="Ростелеком")
+          h4 телефонизация новостроек
+          p Строительство сети FTTB light по адресу МО
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo1.jpg" alt="Смартс")
+          h4 Cтроительство Зонового узла
+          p Строительство Сети Metro Ethernet
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo2.jpg" alt="Газпром")
+          h4 организация узла связи
+          p г. Москва, Варшавское ш., д.118, БЦ « Варшавка Скай»
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo3.jpg" alt="Ростелеком")
+          h4 телефонизация новостроек
+          p Строительство сети FTTB light по адресу МО
+          .circle
+            include data/arr-right.svg
+  // end projects-history
+  .breadcrumbs-bottom
+    ul.list-reset.breadcrumbs-list
+      li: a(href="#") Главная
+      li: a.current(href="#") Каталог

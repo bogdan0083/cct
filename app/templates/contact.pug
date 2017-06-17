@@ -1,0 +1,102 @@
+//- title: Index Page
+extends layouts/_layout
+block head
+  - var title = 'Contact'
+  - var active = 1
+block content
+  // start contact
+  section.contact 
+    .container
+      h1.page-heading Контакты
+      // start contact-group
+      .contact-group
+        .row
+          .col-xs-12.col-sm-6.col-md-6.col-lg-6
+            .contact-section
+              .top
+                .ic
+                  include data/home.svg
+                h3 Офис
+              .contact-block.contact-block-address
+                .ic
+                  include data/marker.svg
+                h5 Адрес
+                p 127106, Москва,Гостиничный пр-д, д. 6, корп. 2
+              .contact-block.contact-block-phone
+                .ic
+                  include data/phone-secondary.svg
+                h5 
+                  | Контактный телефон 
+                  span.separator / 
+                  | Сервисный отдел 
+                p 
+                  span +7 (495) 926-12-40 
+                  span.separator / 
+                  span +7 (495) 926-12-40
+              .contact-block.contact-block-mail
+                .ic
+                  include data/envelope.svg
+                h5 E-mail
+                p info@cctcom.ru
+              .contact-block.contact-block-worktime
+                .ic
+                  img(src="images/clock.png" alt="Часы работы")
+                h5 Часы работы
+                p
+                  span.worktime #[span пн-чт:] 09:00 - 16:30  
+                  span.worktime #[span пт:] 09:00-15:30
+              .contact-map#map-first
+          .col-xs-12.col-sm-6.col-md-6.col-lg-6
+            .contact-section.secondary
+              .top
+                .ic
+                  include data/cart.svg
+                h3 Cклад
+              .contact-block.contact-block-address
+                .ic
+                  include data/marker.svg
+                h5 Адрес
+                p 127106, Москва,Гостиничный пр-д, д. 6, корп. 2
+              .contact-block.contact-block-phone
+                .ic
+                  include data/phone-secondary.svg
+                h5 
+                  | Контактный телефон 
+                  span.separator / 
+                  | Сервисный отдел 
+                p 
+                  span +7 (495) 926-12-40 
+                  span.separator / 
+                  span +7 (495) 926-12-40
+              .contact-block.contact-block-mail
+                .ic
+                  include data/envelope.svg
+                h5 E-mail
+                p info@cctcom.ru
+              .contact-block.contact-block-worktime
+                .ic
+                  img(src="images/clock-blue.png" alt="Часы работы")
+                h5 Часы работы
+                p
+                  span.worktime #[span пн-чт:] 09:00 - 16:30  
+                  span.worktime #[span пт:] 09:00-15:30
+              .contact-map#map-second
+      // end contact-group
+      section.contact-form-block
+        h2 Обратная связь
+        p Наши специалисты оперативно предоставят Вам качественную консультацию по всем вопросам
+        form.contact-form
+          .row
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              input.field(type="text" name="fio" placeholder="ФИО")
+            .col-xs-12.col-sm-6.col-md-6.col-lg-6
+              input.field(type="text" name="tel" placeholder="Телефон")
+            .col-xs-12.col-sm-6.col-md-6.col-lg-6
+              input.field(type="text" name="mail" placeholder="Email")
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              input.field(type="text" name="question" placeholder="Вопрос")
+          button.btn.btn-mini.popup-link(href="popup-contact")
+            span
+              include data/envelope.svg
+                
+  // end contact

@@ -1,0 +1,126 @@
+//- title: Index Page
+extends layouts/_layout
+block head
+  - var title = 'Project Single'
+  - var active = 5
+block content
+  // start project
+  section.project
+    // start top-block
+    .top-block.top-block-project
+      // start top-block-image
+      .top-block-right
+        .background(style="background-image: url(images/news-full1.jpg)")
+      // end top-block-image
+      // start top-block-left
+      .top-block-left
+        .inner
+          a.top-block-back(href='#')
+            .circle
+              include data/arr-left.svg
+            span Вернуться
+          h1.top-block-heading Комплексная модернизация систем связи в ПАО «КАМАЗ»
+          p.top-block-desc Построение телекоммуникационных,  инженерных систем и систем безопасности
+    // start project-promo
+    .project-promo
+      .container
+        .logo
+          img(src="images/project-logo-kamaz.jpg")
+        .text Группа компаний «КАМАЗ» — крупнейшая автомобильная корпорация Российской Федерации. ПАО «КАМАЗ» входит в 20-ку ведущих мировых производителей тяжёлых грузовых автомобилей.
+    // end project-promo
+    section.custom-section
+      .container
+        h2.heading.heading-lined Решения и результаты
+        .row
+          .col-sm-6.col-md-6.col-lg-6
+            p Виртуальные АТС OpenScape 4000 #[br] OpenScape Xpressions
+            p 
+              | Построена отказоустойчивая сеть с кольцевым резервированием 
+              br
+              | Дублирование функций АТС для самых важных объектов 
+              br
+              | Внедрена система унифицированных коммуникаций (UC) 
+          .col-sm-6.col-md-6.col-lg-6
+            p OpenScape Contact Center #[br] Выносы AP3700IP и OpenScape Access 500
+            p 
+              | Произведена  интеграция с другими информационными системами
+              br 
+              | Создан контакт-центр и сервер сообщений
+              br
+              | Масштабируемая система для дальнейшего развития коммуникаций
+    section.custom-section.no-border
+      .container
+        h2.heading.heading-lined Заказчик ПАО «Камаз»
+        p(style="text-align:justify; text-align-last: center") ПАО «КАМАЗ» выпускает широкую гамму грузовой техники: грузовые автомобили (более 60 моделей, свыше 1500 комплектаций, автомобили с правым рулём), прицепы, автобусы, тракторы, двигатели, силовые агрегаты и различный инструмент.  Единый производственный комплекс группы организаций ПАО «КАМАЗ» охватывает весь технологический цикл производства грузовых автомобилей – от разработки, изготовления, сборки автотехники и автокомпонентов до сбыта готовой продукции и сервисного сопровождения.
+        br
+        p(style="text-transform: uppercase; text-align: center") Задача
+        p(style="text-align:justify; text-align-last: center") Перед руководством завода стояла глобальная задача – модернизировать существующие системы связи с целью объединения всех предприятий в одну телефонную сеть с единым номерным фондом и увеличенной  номерной  емкостью. Одновременно требовалось достичь снижения затрат на обслуживание и повышение эффективности совместной работы сотрудников. В связи с этим руководством группы ПАО «КАМАЗ» был объявлен открытый конкурс на поставку и внедрение телекоммуникационных решений нового поколения.
+        br
+        p(style="text-transform: uppercase; text-align: center") Решение
+        p(style="text-align:justify; text-align-last: center") Из всех предложений наиболее удачным оказалось решение компании «Связь Сервис Телекоммуникации» (ССТ). Оно представляло собой аппаратно-программный комплекс на базе цифровых АТС операторского уровня OpenScape 4000 производства компании UNIFY.  «Специалисты ПАО «КАМАЗ» очень серьезно подходили к выбору оборудования. Поэтому мы не только рассказывали о решении и его преимуществах, но и демонстрировали его работу и функциональные возможности на площадке заказчика, - говорит Сергей Паппе, руководитель проекта от «ССТ» - В данном проекте реализована возможность системы по обслуживанию более 12 000 пользователей, подключенных по любым каналам связи - аналоговым или IP». 
+        br
+        p(style="text-align:justify; text-align-last: center") Проектирование новой телекоммуникационной среды было проведено совместно ИТ-службой «КАМАЗ» и инженерами «ССТ». В качестве основы было заложено оптоволоконное «кольцо», которое охватывает 32 производственных площадки и офисных здания в Набережных Челнах. В каждой локации был установлен стек из 2 коммутаторов Summit x460 с независимым энергоснабжением, а уже от него происходило ветвление «звезда» при помощи коммутаторов Summit x430. Все сетевые компоненты были оснащены дополнительными источниками бесперебойного питания (ИБП), обеспечивающими автономную работу на протяжении 4 часов в случае отключения электроэнергии. Отказоустойчивая конфигурация была реализована на основе решения Separated Duplex от компании UNIFY. Суть решения заключается в разнесении дублирующих узлов сервера управления АТС OpenScape 4000 по разным площадкам. Координация взаимодействия происходит за счет синхронной работы трех территориально-распределенных серверов. Благодаря этому достигается катастрофоустойчивость телефонной сети.  
+        br
+        p(style="text-align:justify") Для подключения абонентской емкости была применена технология IPDA (IP распределенная архитектура подключения абонентских выносов).  В качестве абонентских выносов использованы модули AP3700IP, каждый из которых поддерживает подключение до 240 абонентских портов — аналоговых, либо цифровых.  На восьми площадках были установлены абонентские выносы OpenScape Access500 c функцией отказоустойчивости.  В случае отказов сетевого оборудования или центральных серверов управления модули OpenScape Access500 принимают на себя функции управления АТС, пока не будет восстановлена связь с управляющими серверами. 
+    .project-bottom
+      a.btn.btn-mini.popup-link(href="popup-contact")
+        span
+          include data/envelope.svg
+  // end project
+  // start projects-history
+  section.projects-history
+    h3 История успеха
+    ul.projects-slider.list-reset
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo1.jpg" alt="Смартс")
+          h4 Cтроительство Зонового узла
+          p Строительство Сети Metro Ethernet
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo2.jpg" alt="Газпром")
+          h4 организация узла связи
+          p г. Москва, Варшавское ш., д.118, БЦ « Варшавка Скай»
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo3.jpg" alt="Ростелеком")
+          h4 телефонизация новостроек
+          p Строительство сети FTTB light по адресу МО
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo1.jpg" alt="Смартс")
+          h4 Cтроительство Зонового узла
+          p Строительство Сети Metro Ethernet
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo2.jpg" alt="Газпром")
+          h4 организация узла связи
+          p г. Москва, Варшавское ш., д.118, БЦ « Варшавка Скай»
+          .circle
+            include data/arr-right.svg
+      li.slide
+        a.projects-history-slide(href="#")
+          .logo
+            img(src="images/project-logo3.jpg" alt="Ростелеком")
+          h4 телефонизация новостроек
+          p Строительство сети FTTB light по адресу МО
+          .circle
+            include data/arr-right.svg
+  // end projects-history
+  .breadcrumbs-bottom
+    ul.list-reset.breadcrumbs-list
+      li: a(href="#") Главная
+      li: a.current(href="#") Каталог
