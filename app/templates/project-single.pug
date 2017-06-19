@@ -2,7 +2,7 @@
 extends layouts/_layout
 block head
   - var title = 'Project Single'
-  - var active = 5
+  - var active = 4
 block content
   // start project
   section.project
@@ -120,7 +120,3 @@ block content
           .circle
             include data/arr-right.svg
   // end projects-history
-  .breadcrumbs-bottom
-    ul.list-reset.breadcrumbs-list
-      li: a(href="#") Главная
-      li: a.current(href="#") Каталог

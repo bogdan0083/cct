@@ -44,7 +44,6 @@
       opacity: 1
       visibility: visible
       transform: none
-    // TODO: make input appear on click
   .search-form
     position: relative
     button
@@ -111,18 +110,18 @@
     text-transform: uppercase
     color: #fff
     position: relative
-    &.active
-      &:before
-        content: ''
-        bottom: 4px
-        left: 0
-        width: 100%
-        height: 2px
-        background-color: #fff
-        position: absolute
     +rmin($screen-sm)
       padding-left: 20px
       padding-right: 20px
+      &.active
+        &:before
+          content: ''
+          bottom: 4px
+          left: 0
+          width: 100%
+          height: 2px
+          background-color: #fff
+          position: absolute
       &:not(.active):hover
         &:before
           opacity: 1

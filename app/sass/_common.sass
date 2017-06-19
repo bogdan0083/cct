@@ -1,7 +1,7 @@
 +font('Futura Medium C', 'futuramediumc-webfont')
 +font('PF Agora Sans Pro', 'pfagorasanspro-reg-webfont')
 // TODO: refactor .circle element. Too much selector repeats
-
+// refactor all "bottom" classes to .block-bottom
 html
   box-sizing: border-box
   +rmin($screen-sm)
@@ -43,15 +43,29 @@ img
   position: fixed
   height: 100%
   background-color: #fff
-  width: 240px
+  width: 260px
   padding: 10px
   box-shadow: 0 10px 10px 0 rgba(black, 0.1)
   transform: translateX(-260px)
+  z-index: 330
   +tr()
   &.js-active
     transform: none
 /* end mobile-menu */
 
+/* start mobile-nav */
+.mobile-nav
+  a
+    text-decoration: none
+    text-transform: uppercase
+    font-size: 18px
+    display: block
+    padding: 7px 8px
+    +futura()
+    +tr()
+    &:hover
+      color: $color-red
+/* end mobile-nav */
 /* start nav-trigger */
 .nav-trigger
   position: absolute
@@ -67,28 +81,26 @@ img
 /* end nav-trigger */
 
 .out
-  overflow: hidden
-  position: relative
-  will-change: transform
   +tr()
-  &:before
-    content: ''
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    background-color: rgba(#001e42, 0.3)
-    visibility: hidden
-    opacity: 0
-    transition: visibility 0.3s, opacity 0.3s 0.1s
-    z-index: 10
-  &.js-overlayed
-    transform: translateX(240px)
-    &:before
-      transition: visibility 0.05s, opacity 0.3s 0.01s
-      visibility: visible
-      opacity: 1
+  &.active
+    transform: translateX(260px)
+
+.js-overlay
+  content: ''
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(#001e42, 0.3)
+  opacity: 0
+  visibility: hidden
+  transition: visibility 0.3s, opacity 0.3s 0.01s
+  z-index: 200
+  cursor: pointer
+  &.active
+    opacity: 1
+    visibility: visible
 
 .list-reset
   padding: 0
@@ -101,7 +113,7 @@ img
   font-size: 32px
   color: #153a62
   text-transform: uppercase
-  margin-top: 40px
+  margin-top: 50px
   margin-bottom: 34px
   +rmin($screen-sm)
     font-size: 43px
@@ -239,3 +251,20 @@ img
       margin-left: -122px
       background-color: #b62c45
 /* end heading */
+
+.field
+  width: 100%
+  background-color: transparent
+  height: 40px
+  border: none
+  border-bottom: 1px solid #a0b5c7
+  color: rgba(#0a1623, 0.7)
+  display: block
+  font-size: 16px
+  font-family: 'Calibri', 'Calibri Custom', sans-serif
+  margin: 12px 0
+  &:focus
+    outline: none
+    border-color: darken(#a0b5c7, 20%)
+  &::placeholder
+    color: rgba(#0a1623, 0.7)

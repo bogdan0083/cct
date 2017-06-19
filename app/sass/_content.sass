@@ -83,7 +83,7 @@
       line-height: 1.4
       +tr()
       &:hover
-        color: black
+        color: $color-red
 /* end catalog-item */
 
 /* start catalog-bottom */
@@ -647,12 +647,13 @@
     margin-right: 30px
   .img
     +tr()
-  &:hover
-    transform: scale(1.1)
-    .img
-      opacity: .6
-    .desc
-      opacity: 1
+  +rmin($screen-sm)
+    &:hover
+      transform: scale(1.1)
+      .img
+          opacity: .6
+      .desc
+        opacity: 1
   .desc
     margin-top: 8px
     color: #0a1623
@@ -796,17 +797,18 @@
   +rmin($screen-sm)
     padding-bottom: 70px
 .news-article-bottom
-  margin-top: 40px
+  +rmin($screen-sm)
+    margin-top: 40px
 
 .custom-content
   color: #0a1623
-  padding-bottom: 20px
+  padding-bottom: 30px
   line-height: 1.7
   max-width: 1185px
   margin: 0 auto
   +rmin($screen-sm)
     padding-top: 40px
-    padding-bottom: 10px
+    padding-bottom: 30px
     .container
       max-width: 1240px
 
@@ -979,7 +981,7 @@
   &-bottom
     margin-top: 30px
 /* start project-promo */
-.project-promo, .department-promo
+.project-promo, .department-promo, .solution-promo
   text-align: center
   padding: 40px 0
   border-bottom: 1px solid #cddce7
@@ -1010,15 +1012,20 @@
   .container
     max-width: 1190px
   .row
+    > div
+      margin-top: 20px
+      margin-bottom: 20px
     +rmin($screen-sm)
       margin-left: -40px
       margin-right: -40px
       > div
         padding-right: 30px
         padding-left: 30px
+        margin-top: 0
+        margin-bottom: 0
 /* end custom-section */
 
-.departments, .department
+.departments, .department, .solution
   padding-bottom: 40px
   +rmin($screen-sm)
     padding-bottom: 80px
@@ -1152,7 +1159,7 @@
   +rmin($screen-sm)
     margin-top: 70px
 
-.department-promo
+.department-promo, .solution-promo
   .container
     max-width: 1190px
 
@@ -1277,3 +1284,134 @@
     span
       color: #6d6f72
 /* end contact-section */
+
+.contact
+  padding-bottom: 40px
+  +rmin($screen-sm)
+    padding-bottom: 80px
+.contact-form-block
+  max-width: 670px
+  margin: 0 auto
+  padding-top: 30px
+  text-align: center
+  .row
+    margin-left: -35px
+    margin-right: -35px
+    > div
+      padding-left: 35px
+      padding-right: 35px
+  h2
+    text-transform: uppercase
+    letter-spacing: 1px
+    font-size: 22px
+    margin-bottom: 10px
+    +futura()
+  p
+    max-width: 470px
+    margin: 0 auto
+    font-size: 17px
+    color: rgba(#0a1623, 0.67)
+    line-height: 1.6
+    margin-bottom: 16px
+  .btn
+    margin-top: 50px
+
+.solutions
+  padding-bottom: 40px
+  +rmin($screen-sm)
+    padding-bottom: 80px
+
+/* start solutions-item */
+.solutions-item
+  margin: 12px auto
+  background-color: white
+  text-align: center
+  position: relative
+  z-index: 30
+  &.active
+    z-index: 300
+  .solutions-image
+    display: block
+    overflow: hidden
+    img
+      width: 100%
+      display: block
+  .content
+    +rmin($screen-sm)
+      height: 380px
+  .inner
+    padding: 30px 0
+    border: 1px solid #b0c6d3
+    padding-left: 20px
+    padding-right: 20px
+    padding-bottom: 30px
+    background-color: white
+    min-height: 100%
+    +rmin($screen-sm)
+      padding-top: 60px
+      padding-left: 10px
+      padding-right: 10px
+      padding-bottom: 40px
+    +rmin($screen-lg)
+      padding-left: 70px
+      padding-right: 70px
+  &-heading
+    +futura()
+    font-size: 18px
+    text-transform: uppercase
+    letter-spacing: 1px
+    padding-bottom: 8px
+    position: relative
+    margin-bottom: 10px
+    line-height: 1.7
+    &:after
+      content: ''
+      position: absolute
+      left: 50%
+      bottom: 0
+      background-color: #bc324e
+      width: 166px
+      height: 1px
+      margin-left: -83px
+  .solutions-item-container
+    height: 180px
+    overflow: hidden
+  &-link
+    display: block
+    text-decoration: none
+    padding: 6px 0
+    line-height: 1.4
+    color: #153a62
+    +tr()
+    &:hover
+      color: $color-red
+  .circle
+    width: 28px
+    height: 28px
+    border-radius: 50%
+    border: 1px solid #b92845
+    background-color: #b92845
+    display: inline-block
+    vertical-align: middle
+    margin: 40px auto 0
+    position: relative
+    +tr()
+    svg
+      position: absolute
+      margin: auto
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      +tr()
+      path
+        +tr()
+    &:hover
+      transform: scale(1.2)
+    &.active
+      transform: rotate(-180deg)
+      background-color: #fff
+      border-color: $color-red
+      svg path
+        fill: $color-red
+/* end solutions-item */

@@ -3,6 +3,9 @@ $(document).ready(function () {
   var $navTrigger = $('.nav-trigger');
   var $mobileMenu = $('.mobile-menu');
   var $outWrapper = $('.out');
+
+  // overlay
+  var $overlay = $('.js-overlay');
   var $formTrigger = $('.js-form-trigger');
   var $mainNavTrigger = $('.main-nav-trigger');
   var $projectsSlider = $('.projects-slider');
@@ -11,12 +14,27 @@ $(document).ready(function () {
   // window width
   var windowWdth = $(window).width();
   // end variables
+
+  // Убираем оверлей при клике
+  $overlay.click(function () {
+    $overlay.removeClass('active');
+    $outWrapper.removeClass('active');
+    $mobileMenu.removeClass('js-active');
+    $navTrigger.removeClass('js-active');
+    if (solutionsItemIsActive) {
+      $('.solutions-item.active')
+        .find('.js-circle-toggle')
+        .trigger('click');
+    }
+  });
+
   // Mobile menu click events
   $('.nav-trigger').click(function (e) {
     e.preventDefault();
     $navTrigger.toggleClass('js-active');
     $mobileMenu.toggleClass('js-active');
-    $outWrapper.toggleClass('js-overlayed');
+    $overlay.toggleClass('active');
+    $outWrapper.toggleClass('active');
   });
 
   // form trigger
@@ -88,6 +106,7 @@ $(document).ready(function () {
   var $grid = $('.grid').isotope({
     itemSelector: '.projects-col'
   });
+
   // bind filter button click
   $('.projects-filter').on( 'click', 'a', function (e) {
     e.preventDefault();
@@ -97,6 +116,35 @@ $(document).ready(function () {
     $grid.isotope({ filter: filterValue });
   });
 
+  // Активнен ли айтем в .solutions-item?
+  var solutionsItemIsActive = false;
+
+  $('.js-circle-toggle').click(function (e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $item = $this.closest('.solutions-item');
+    var $container = $this.prev();
+    var $wrap = $container.find('.wrap');
+
+    $this.toggleClass('active');
+
+    if ($this.hasClass('active')) {
+      var $wrapHeight = $wrap.height();
+      $overlay.addClass('active');
+      $container.animate({
+        height: $wrapHeight
+      });
+      $item.addClass('active');
+      solutionsItemIsActive = true;
+    } else {
+      $container.animate({
+        height: 180
+      });
+      $overlay.removeClass('active');
+      $item.removeClass('active');
+      solutionsItemIsActive = false;
+    }
+  });
 
   var mapStyles = [
   {

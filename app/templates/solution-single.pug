@@ -2,15 +2,15 @@
 extends layouts/_layout
 block head
   - var title = 'Department Single'
-  - var active = 3
+  - var active = 2
 block content
-  // start department
-  section.department
+  // start solution
+  section.solution
     // start top-block
     .top-block.top-block-project
       // start top-block-image
       .top-block-right
-        .background(style="background-image: url(images/news-full1.jpg)")
+        .background(style="background-image: url(images/catalog-img-full.jpg)")
       // end top-block-image
       // start top-block-left
       .top-block-left
@@ -19,13 +19,13 @@ block content
             .circle
               include data/arr-left.svg
             span Вернуться
-          h1.top-block-heading Финансовые #[br] институты
+          h1.top-block-heading Информационно- вычислительные комплексы 
           p.top-block-desc Построение телекоммуникационных, информационных, инженерных систем и систем безопасности
-    // start department-promo
-    .department-promo
+    // start solution-promo
+    .solution-promo
       .container
         .text Система охранная телевизионная (СОТ) — вид системы безопасности, обеспечивающий постоянный визуальный контроль над определенной территорией в целях моментального реагирования на непредвиденные ситуации. СОТ позволяет значительно повысить эффективность охраны на объекте и сократить время принятия решения при возникновении внештатной ситуации.
-    // end department-promo
+    // end solution-promo
     section.custom-section.no-border
       .container
         h2.heading.heading-lined Компоненты системы видеонаблюдения
